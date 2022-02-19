@@ -1,0 +1,968 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55B238D227C076FD002F3909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238D127C076FD002F3909 /* AppDelegate.swift */; };
+		55B238D427C076FD002F3909 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238D327C076FD002F3909 /* SceneDelegate.swift */; };
+		55B238D727C076FD002F3909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B238D527C076FD002F3909 /* LaunchScreen.storyboard */; };
+		55B238DA27C076FD002F3909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B238D827C076FD002F3909 /* Main.storyboard */; };
+		55B238E327C076FD002F3909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238E227C076FD002F3909 /* AppDelegate.swift */; };
+		55B238E627C076FD002F3909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B238E427C076FD002F3909 /* Main.storyboard */; };
+		55B238ED27C076FD002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238EC27C076FD002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		55B238F727C076FE002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238F627C076FE002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		55B238FD27C076FE002F3909 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238B827C076FC002F3909 /* Main.html */; };
+		55B238FE27C076FE002F3909 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238B827C076FC002F3909 /* Main.html */; };
+		55B238FF27C076FE002F3909 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BA27C076FC002F3909 /* Icon.png */; };
+		55B2390027C076FE002F3909 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BA27C076FC002F3909 /* Icon.png */; };
+		55B2390127C076FE002F3909 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BB27C076FC002F3909 /* Style.css */; };
+		55B2390227C076FE002F3909 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BB27C076FC002F3909 /* Style.css */; };
+		55B2390327C076FE002F3909 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BC27C076FC002F3909 /* Script.js */; };
+		55B2390427C076FE002F3909 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BC27C076FC002F3909 /* Script.js */; };
+		55B2390527C076FE002F3909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238BD27C076FC002F3909 /* ViewController.swift */; };
+		55B2390627C076FE002F3909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238BD27C076FC002F3909 /* ViewController.swift */; };
+		55B2390727C076FE002F3909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BE27C076FD002F3909 /* Assets.xcassets */; };
+		55B2390827C076FE002F3909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BE27C076FD002F3909 /* Assets.xcassets */; };
+		55B2390927C076FE002F3909 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */; };
+		55B2390A27C076FE002F3909 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */; };
+		55B2390B27C076FE002F3909 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C227C076FD002F3909 /* _locales */; };
+		55B2390C27C076FE002F3909 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C227C076FD002F3909 /* _locales */; };
+		55B2390D27C076FE002F3909 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C327C076FD002F3909 /* images */; };
+		55B2390E27C076FE002F3909 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C327C076FD002F3909 /* images */; };
+		55B2390F27C076FE002F3909 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C427C076FD002F3909 /* manifest.json */; };
+		55B2391027C076FE002F3909 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C427C076FD002F3909 /* manifest.json */; };
+		55B2391127C076FE002F3909 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C527C076FD002F3909 /* background.js */; };
+		55B2391227C076FE002F3909 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C527C076FD002F3909 /* background.js */; };
+		55B2391327C076FE002F3909 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C627C076FD002F3909 /* content.js */; };
+		55B2391427C076FE002F3909 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C627C076FD002F3909 /* content.js */; };
+		55B2391527C076FE002F3909 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C727C076FD002F3909 /* popup.html */; };
+		55B2391627C076FE002F3909 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C727C076FD002F3909 /* popup.html */; };
+		55B2391727C076FE002F3909 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C827C076FD002F3909 /* popup.css */; };
+		55B2391827C076FE002F3909 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C827C076FD002F3909 /* popup.css */; };
+		55B2391927C076FE002F3909 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C927C076FD002F3909 /* popup.js */; };
+		55B2391A27C076FE002F3909 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C927C076FD002F3909 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55B238EE27C076FD002F3909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55B238B227C076FB002F3909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55B238EB27C076FD002F3909;
+			remoteInfo = "Purity Extension (iOS)";
+		};
+		55B238F827C076FE002F3909 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55B238B227C076FB002F3909 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55B238F527C076FE002F3909;
+			remoteInfo = "Purity Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		55B2392027C076FE002F3909 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				55B238ED27C076FD002F3909 /* Purity Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B2392727C076FE002F3909 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				55B238F727C076FE002F3909 /* Purity Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		55B238B927C076FC002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		55B238BA27C076FC002F3909 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		55B238BB27C076FC002F3909 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		55B238BC27C076FC002F3909 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		55B238BD27C076FC002F3909 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55B238BE27C076FD002F3909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		55B238C227C076FD002F3909 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		55B238C327C076FD002F3909 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		55B238C427C076FD002F3909 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		55B238C527C076FD002F3909 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		55B238C627C076FD002F3909 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		55B238C727C076FD002F3909 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		55B238C827C076FD002F3909 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		55B238C927C076FD002F3909 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		55B238CE27C076FD002F3909 /* Purity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Purity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B238D127C076FD002F3909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55B238D327C076FD002F3909 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		55B238D627C076FD002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55B238D927C076FD002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55B238DB27C076FD002F3909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B238E027C076FD002F3909 /* Purity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Purity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B238E227C076FD002F3909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55B238E527C076FD002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55B238E727C076FD002F3909 /* Purity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Purity.entitlements; sourceTree = "<group>"; };
+		55B238EC27C076FD002F3909 /* Purity Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Purity Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B238F127C076FD002F3909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B238F627C076FE002F3909 /* Purity Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Purity Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55B238FB27C076FE002F3909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B238FC27C076FE002F3909 /* Purity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Purity.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55B238CB27C076FD002F3909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238DD27C076FD002F3909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238E927C076FD002F3909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238F327C076FE002F3909 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55B238B127C076FB002F3909 = {
+			isa = PBXGroup;
+			children = (
+				55B238B627C076FC002F3909 /* Shared (App) */,
+				55B238BF27C076FD002F3909 /* Shared (Extension) */,
+				55B238D027C076FD002F3909 /* iOS (App) */,
+				55B238E127C076FD002F3909 /* macOS (App) */,
+				55B238F027C076FD002F3909 /* iOS (Extension) */,
+				55B238FA27C076FE002F3909 /* macOS (Extension) */,
+				55B238CF27C076FD002F3909 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55B238B627C076FC002F3909 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				55B238BD27C076FC002F3909 /* ViewController.swift */,
+				55B238BE27C076FD002F3909 /* Assets.xcassets */,
+				55B238B727C076FC002F3909 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		55B238B727C076FC002F3909 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55B238B827C076FC002F3909 /* Main.html */,
+				55B238BA27C076FC002F3909 /* Icon.png */,
+				55B238BB27C076FC002F3909 /* Style.css */,
+				55B238BC27C076FC002F3909 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		55B238BF27C076FD002F3909 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */,
+				55B238C127C076FD002F3909 /* Resources */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		55B238C127C076FD002F3909 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55B238C227C076FD002F3909 /* _locales */,
+				55B238C327C076FD002F3909 /* images */,
+				55B238C427C076FD002F3909 /* manifest.json */,
+				55B238C527C076FD002F3909 /* background.js */,
+				55B238C627C076FD002F3909 /* content.js */,
+				55B238C727C076FD002F3909 /* popup.html */,
+				55B238C827C076FD002F3909 /* popup.css */,
+				55B238C927C076FD002F3909 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		55B238CF27C076FD002F3909 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55B238CE27C076FD002F3909 /* Purity.app */,
+				55B238E027C076FD002F3909 /* Purity.app */,
+				55B238EC27C076FD002F3909 /* Purity Extension.appex */,
+				55B238F627C076FE002F3909 /* Purity Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55B238D027C076FD002F3909 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				55B238D127C076FD002F3909 /* AppDelegate.swift */,
+				55B238D327C076FD002F3909 /* SceneDelegate.swift */,
+				55B238D527C076FD002F3909 /* LaunchScreen.storyboard */,
+				55B238D827C076FD002F3909 /* Main.storyboard */,
+				55B238DB27C076FD002F3909 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		55B238E127C076FD002F3909 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				55B238E227C076FD002F3909 /* AppDelegate.swift */,
+				55B238E427C076FD002F3909 /* Main.storyboard */,
+				55B238E727C076FD002F3909 /* Purity.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		55B238F027C076FD002F3909 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				55B238F127C076FD002F3909 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		55B238FA27C076FE002F3909 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				55B238FB27C076FE002F3909 /* Info.plist */,
+				55B238FC27C076FE002F3909 /* Purity.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55B238CD27C076FD002F3909 /* Purity (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55B2392127C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity (iOS)" */;
+			buildPhases = (
+				55B238CA27C076FD002F3909 /* Sources */,
+				55B238CB27C076FD002F3909 /* Frameworks */,
+				55B238CC27C076FD002F3909 /* Resources */,
+				55B2392027C076FE002F3909 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55B238EF27C076FD002F3909 /* PBXTargetDependency */,
+			);
+			name = "Purity (iOS)";
+			productName = "Purity (iOS)";
+			productReference = 55B238CE27C076FD002F3909 /* Purity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55B238DF27C076FD002F3909 /* Purity (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55B2392827C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity (macOS)" */;
+			buildPhases = (
+				55B238DC27C076FD002F3909 /* Sources */,
+				55B238DD27C076FD002F3909 /* Frameworks */,
+				55B238DE27C076FD002F3909 /* Resources */,
+				55B2392727C076FE002F3909 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55B238F927C076FE002F3909 /* PBXTargetDependency */,
+			);
+			name = "Purity (macOS)";
+			productName = "Purity (macOS)";
+			productReference = 55B238E027C076FD002F3909 /* Purity.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55B238EB27C076FD002F3909 /* Purity Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55B2391D27C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity Extension (iOS)" */;
+			buildPhases = (
+				55B238E827C076FD002F3909 /* Sources */,
+				55B238E927C076FD002F3909 /* Frameworks */,
+				55B238EA27C076FD002F3909 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Purity Extension (iOS)";
+			productName = "Purity Extension (iOS)";
+			productReference = 55B238EC27C076FD002F3909 /* Purity Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		55B238F527C076FE002F3909 /* Purity Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55B2392427C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity Extension (macOS)" */;
+			buildPhases = (
+				55B238F227C076FE002F3909 /* Sources */,
+				55B238F327C076FE002F3909 /* Frameworks */,
+				55B238F427C076FE002F3909 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Purity Extension (macOS)";
+			productName = "Purity Extension (macOS)";
+			productReference = 55B238F627C076FE002F3909 /* Purity Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55B238B227C076FB002F3909 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					55B238CD27C076FD002F3909 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					55B238DF27C076FD002F3909 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					55B238EB27C076FD002F3909 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					55B238F527C076FE002F3909 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 55B238B527C076FB002F3909 /* Build configuration list for PBXProject "Purity" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55B238B127C076FB002F3909;
+			productRefGroup = 55B238CF27C076FD002F3909 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55B238CD27C076FD002F3909 /* Purity (iOS) */,
+				55B238DF27C076FD002F3909 /* Purity (macOS) */,
+				55B238EB27C076FD002F3909 /* Purity Extension (iOS) */,
+				55B238F527C076FE002F3909 /* Purity Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55B238CC27C076FD002F3909 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B238FF27C076FE002F3909 /* Icon.png in Resources */,
+				55B238D727C076FD002F3909 /* LaunchScreen.storyboard in Resources */,
+				55B238FD27C076FE002F3909 /* Main.html in Resources */,
+				55B2390327C076FE002F3909 /* Script.js in Resources */,
+				55B2390727C076FE002F3909 /* Assets.xcassets in Resources */,
+				55B238DA27C076FD002F3909 /* Main.storyboard in Resources */,
+				55B2390127C076FE002F3909 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238DE27C076FD002F3909 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B2390027C076FE002F3909 /* Icon.png in Resources */,
+				55B2390227C076FE002F3909 /* Style.css in Resources */,
+				55B238E627C076FD002F3909 /* Main.storyboard in Resources */,
+				55B2390427C076FE002F3909 /* Script.js in Resources */,
+				55B2390827C076FE002F3909 /* Assets.xcassets in Resources */,
+				55B238FE27C076FE002F3909 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238EA27C076FD002F3909 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B2391127C076FE002F3909 /* background.js in Resources */,
+				55B2391727C076FE002F3909 /* popup.css in Resources */,
+				55B2391527C076FE002F3909 /* popup.html in Resources */,
+				55B2390D27C076FE002F3909 /* images in Resources */,
+				55B2390F27C076FE002F3909 /* manifest.json in Resources */,
+				55B2390B27C076FE002F3909 /* _locales in Resources */,
+				55B2391327C076FE002F3909 /* content.js in Resources */,
+				55B2391927C076FE002F3909 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238F427C076FE002F3909 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B2391227C076FE002F3909 /* background.js in Resources */,
+				55B2391827C076FE002F3909 /* popup.css in Resources */,
+				55B2391627C076FE002F3909 /* popup.html in Resources */,
+				55B2390E27C076FE002F3909 /* images in Resources */,
+				55B2391027C076FE002F3909 /* manifest.json in Resources */,
+				55B2390C27C076FE002F3909 /* _locales in Resources */,
+				55B2391427C076FE002F3909 /* content.js in Resources */,
+				55B2391A27C076FE002F3909 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55B238CA27C076FD002F3909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B2390527C076FE002F3909 /* ViewController.swift in Sources */,
+				55B238D227C076FD002F3909 /* AppDelegate.swift in Sources */,
+				55B238D427C076FD002F3909 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238DC27C076FD002F3909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B2390627C076FE002F3909 /* ViewController.swift in Sources */,
+				55B238E327C076FD002F3909 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238E827C076FD002F3909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B2390927C076FE002F3909 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55B238F227C076FE002F3909 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55B2390A27C076FE002F3909 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55B238EF27C076FD002F3909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55B238EB27C076FD002F3909 /* Purity Extension (iOS) */;
+			targetProxy = 55B238EE27C076FD002F3909 /* PBXContainerItemProxy */;
+		};
+		55B238F927C076FE002F3909 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55B238F527C076FE002F3909 /* Purity Extension (macOS) */;
+			targetProxy = 55B238F827C076FE002F3909 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55B238B827C076FC002F3909 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B238B927C076FC002F3909 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		55B238D527C076FD002F3909 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B238D627C076FD002F3909 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		55B238D827C076FD002F3909 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B238D927C076FD002F3909 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55B238E427C076FD002F3909 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55B238E527C076FD002F3909 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55B2391B27C076FE002F3909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55B2391C27C076FE002F3909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		55B2391E27C076FE002F3909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Purity Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.helloyunho.Purity.Extension;
+				PRODUCT_NAME = "Purity Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55B2391F27C076FE002F3909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Purity Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.helloyunho.Purity.Extension;
+				PRODUCT_NAME = "Purity Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55B2392227C076FE002F3909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Purity;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.helloyunho.Purity;
+				PRODUCT_NAME = Purity;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55B2392327C076FE002F3909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Purity;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.helloyunho.Purity;
+				PRODUCT_NAME = Purity;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55B2392527C076FE002F3909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Purity.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Purity Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.helloyunho.Purity.Extension;
+				PRODUCT_NAME = "Purity Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		55B2392627C076FE002F3909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Purity.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Purity Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.helloyunho.Purity.Extension;
+				PRODUCT_NAME = "Purity Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		55B2392927C076FE002F3909 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Purity.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Purity;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.helloyunho.Purity;
+				PRODUCT_NAME = Purity;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		55B2392A27C076FE002F3909 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Purity.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Purity;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.helloyunho.Purity;
+				PRODUCT_NAME = Purity;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55B238B527C076FB002F3909 /* Build configuration list for PBXProject "Purity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B2391B27C076FE002F3909 /* Debug */,
+				55B2391C27C076FE002F3909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55B2391D27C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B2391E27C076FE002F3909 /* Debug */,
+				55B2391F27C076FE002F3909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55B2392127C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B2392227C076FE002F3909 /* Debug */,
+				55B2392327C076FE002F3909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55B2392427C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B2392527C076FE002F3909 /* Debug */,
+				55B2392627C076FE002F3909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55B2392827C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55B2392927C076FE002F3909 /* Debug */,
+				55B2392A27C076FE002F3909 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55B238B227C076FB002F3909 /* Project object */;
+}
