@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var extensionState: ExtensionState = .unknown
+    
     var body: some View {
         VStack {
             Image("Icon")
@@ -16,6 +18,19 @@ struct ContentView: View {
             Text("Purity")
                 .font(.largeTitle)
                 .fontWeight(.bold)
+            switch extensionState {
+            case .unknown:
+                Text("If it's not enabled yet, you can enable the extension in Settings.")
+            case .disabled:
+                Text("Enable this extension in Safari Extensions preferences.")
+            case .enabled:
+                Text("The extension is already enabled.")
+            }
+        }
+        .onAppear {
+            Task {
+                extensionState = await ExtensionState.getState()
+            }
         }
         #if os(macOS)
         .frame(maxWidth: 800, maxHeight: 600)

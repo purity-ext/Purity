@@ -11,6 +11,8 @@
 		555D1DA827C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
 		555D1DAC27C6426B008464B5 /* PurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DAB27C6426B008464B5 /* PurityApp.swift */; };
 		555D1DAD27C6426B008464B5 /* PurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DAB27C6426B008464B5 /* PurityApp.swift */; };
+		555D1DB127C65450008464B5 /* ExtensionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DB027C65450008464B5 /* ExtensionState.swift */; };
+		555D1DB227C65450008464B5 /* ExtensionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DB027C65450008464B5 /* ExtensionState.swift */; };
 		55B238ED27C076FD002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238EC27C076FD002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B238F727C076FE002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238F627C076FE002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B238FD27C076FE002F3909 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238B827C076FC002F3909 /* Main.html */; };
@@ -21,8 +23,6 @@
 		55B2390227C076FE002F3909 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BB27C076FC002F3909 /* Style.css */; };
 		55B2390327C076FE002F3909 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BC27C076FC002F3909 /* Script.js */; };
 		55B2390427C076FE002F3909 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BC27C076FC002F3909 /* Script.js */; };
-		55B2390527C076FE002F3909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238BD27C076FC002F3909 /* ViewController.swift */; };
-		55B2390627C076FE002F3909 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238BD27C076FC002F3909 /* ViewController.swift */; };
 		55B2390727C076FE002F3909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BE27C076FD002F3909 /* Assets.xcassets */; };
 		55B2390827C076FE002F3909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BE27C076FD002F3909 /* Assets.xcassets */; };
 		55B2390927C076FE002F3909 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */; };
@@ -90,11 +90,12 @@
 /* Begin PBXFileReference section */
 		555D1DA627C64117008464B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		555D1DAB27C6426B008464B5 /* PurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurityApp.swift; sourceTree = "<group>"; };
+		555D1DAE27C652FC008464B5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		555D1DB027C65450008464B5 /* ExtensionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionState.swift; sourceTree = "<group>"; };
 		55B238B927C076FC002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		55B238BA27C076FC002F3909 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		55B238BB27C076FC002F3909 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
 		55B238BC27C076FC002F3909 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
-		55B238BD27C076FC002F3909 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55B238BE27C076FD002F3909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		55B238C227C076FD002F3909 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
@@ -148,9 +149,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		555D1DAF27C653FF008464B5 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				555D1DB027C65450008464B5 /* ExtensionState.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		55B238B127C076FB002F3909 = {
 			isa = PBXGroup;
 			children = (
+				555D1DAE27C652FC008464B5 /* LICENSE */,
 				55B238B627C076FC002F3909 /* Shared (App) */,
 				55B238BF27C076FD002F3909 /* Shared (Extension) */,
 				55B238D027C076FD002F3909 /* iOS (App) */,
@@ -164,7 +174,7 @@
 		55B238B627C076FC002F3909 /* Shared (App) */ = {
 			isa = PBXGroup;
 			children = (
-				55B238BD27C076FC002F3909 /* ViewController.swift */,
+				555D1DAF27C653FF008464B5 /* Enums */,
 				55B238BE27C076FD002F3909 /* Assets.xcassets */,
 				55B238B727C076FC002F3909 /* Resources */,
 				555D1DA627C64117008464B5 /* ContentView.swift */,
@@ -434,7 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55B2390527C076FE002F3909 /* ViewController.swift in Sources */,
+				555D1DB127C65450008464B5 /* ExtensionState.swift in Sources */,
 				555D1DA727C64117008464B5 /* ContentView.swift in Sources */,
 				555D1DAC27C6426B008464B5 /* PurityApp.swift in Sources */,
 			);
@@ -444,7 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55B2390627C076FE002F3909 /* ViewController.swift in Sources */,
+				555D1DB227C65450008464B5 /* ExtensionState.swift in Sources */,
 				555D1DA827C64117008464B5 /* ContentView.swift in Sources */,
 				555D1DAD27C6426B008464B5 /* PurityApp.swift in Sources */,
 			);
