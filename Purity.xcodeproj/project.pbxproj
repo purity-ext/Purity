@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		55B238D227C076FD002F3909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238D127C076FD002F3909 /* AppDelegate.swift */; };
-		55B238D427C076FD002F3909 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238D327C076FD002F3909 /* SceneDelegate.swift */; };
-		55B238D727C076FD002F3909 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B238D527C076FD002F3909 /* LaunchScreen.storyboard */; };
-		55B238DA27C076FD002F3909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B238D827C076FD002F3909 /* Main.storyboard */; };
-		55B238E327C076FD002F3909 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238E227C076FD002F3909 /* AppDelegate.swift */; };
-		55B238E627C076FD002F3909 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55B238E427C076FD002F3909 /* Main.storyboard */; };
+		555D1DA727C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
+		555D1DA827C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
+		555D1DAC27C6426B008464B5 /* PurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DAB27C6426B008464B5 /* PurityApp.swift */; };
+		555D1DAD27C6426B008464B5 /* PurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DAB27C6426B008464B5 /* PurityApp.swift */; };
 		55B238ED27C076FD002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238EC27C076FD002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B238F727C076FE002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238F627C076FE002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B238FD27C076FE002F3909 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238B827C076FC002F3909 /* Main.html */; };
@@ -90,6 +88,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		555D1DA627C64117008464B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		555D1DAB27C6426B008464B5 /* PurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurityApp.swift; sourceTree = "<group>"; };
 		55B238B927C076FC002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		55B238BA27C076FC002F3909 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		55B238BB27C076FC002F3909 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
@@ -106,14 +106,8 @@
 		55B238C827C076FD002F3909 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
 		55B238C927C076FD002F3909 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
 		55B238CE27C076FD002F3909 /* Purity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Purity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		55B238D127C076FD002F3909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55B238D327C076FD002F3909 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55B238D627C076FD002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		55B238D927C076FD002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55B238DB27C076FD002F3909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B238E027C076FD002F3909 /* Purity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Purity.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		55B238E227C076FD002F3909 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		55B238E527C076FD002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55B238E727C076FD002F3909 /* Purity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Purity.entitlements; sourceTree = "<group>"; };
 		55B238EC27C076FD002F3909 /* Purity Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Purity Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B238F127C076FD002F3909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +167,8 @@
 				55B238BD27C076FC002F3909 /* ViewController.swift */,
 				55B238BE27C076FD002F3909 /* Assets.xcassets */,
 				55B238B727C076FC002F3909 /* Resources */,
+				555D1DA627C64117008464B5 /* ContentView.swift */,
+				555D1DAB27C6426B008464B5 /* PurityApp.swift */,
 			);
 			path = "Shared (App)";
 			sourceTree = "<group>";
@@ -226,10 +222,6 @@
 		55B238D027C076FD002F3909 /* iOS (App) */ = {
 			isa = PBXGroup;
 			children = (
-				55B238D127C076FD002F3909 /* AppDelegate.swift */,
-				55B238D327C076FD002F3909 /* SceneDelegate.swift */,
-				55B238D527C076FD002F3909 /* LaunchScreen.storyboard */,
-				55B238D827C076FD002F3909 /* Main.storyboard */,
 				55B238DB27C076FD002F3909 /* Info.plist */,
 			);
 			path = "iOS (App)";
@@ -238,8 +230,6 @@
 		55B238E127C076FD002F3909 /* macOS (App) */ = {
 			isa = PBXGroup;
 			children = (
-				55B238E227C076FD002F3909 /* AppDelegate.swift */,
-				55B238E427C076FD002F3909 /* Main.storyboard */,
 				55B238E727C076FD002F3909 /* Purity.entitlements */,
 			);
 			path = "macOS (App)";
@@ -388,11 +378,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B238FF27C076FE002F3909 /* Icon.png in Resources */,
-				55B238D727C076FD002F3909 /* LaunchScreen.storyboard in Resources */,
 				55B238FD27C076FE002F3909 /* Main.html in Resources */,
 				55B2390327C076FE002F3909 /* Script.js in Resources */,
 				55B2390727C076FE002F3909 /* Assets.xcassets in Resources */,
-				55B238DA27C076FD002F3909 /* Main.storyboard in Resources */,
 				55B2390127C076FE002F3909 /* Style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,7 +391,6 @@
 			files = (
 				55B2390027C076FE002F3909 /* Icon.png in Resources */,
 				55B2390227C076FE002F3909 /* Style.css in Resources */,
-				55B238E627C076FD002F3909 /* Main.storyboard in Resources */,
 				55B2390427C076FE002F3909 /* Script.js in Resources */,
 				55B2390827C076FE002F3909 /* Assets.xcassets in Resources */,
 				55B238FE27C076FE002F3909 /* Main.html in Resources */,
@@ -448,8 +435,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B2390527C076FE002F3909 /* ViewController.swift in Sources */,
-				55B238D227C076FD002F3909 /* AppDelegate.swift in Sources */,
-				55B238D427C076FD002F3909 /* SceneDelegate.swift in Sources */,
+				555D1DA727C64117008464B5 /* ContentView.swift in Sources */,
+				555D1DAC27C6426B008464B5 /* PurityApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +445,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				55B2390627C076FE002F3909 /* ViewController.swift in Sources */,
-				55B238E327C076FD002F3909 /* AppDelegate.swift in Sources */,
+				555D1DA827C64117008464B5 /* ContentView.swift in Sources */,
+				555D1DAD27C6426B008464B5 /* PurityApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,30 +488,6 @@
 				55B238B927C076FC002F3909 /* Base */,
 			);
 			name = Main.html;
-			sourceTree = "<group>";
-		};
-		55B238D527C076FD002F3909 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55B238D627C076FD002F3909 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		55B238D827C076FD002F3909 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55B238D927C076FD002F3909 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		55B238E427C076FD002F3909 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55B238E527C076FD002F3909 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -715,9 +679,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Purity;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -753,9 +716,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Purity;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -797,7 +759,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -829,7 +791,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -857,13 +819,12 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Purity;
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",
@@ -892,13 +853,12 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Purity;
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"-framework",

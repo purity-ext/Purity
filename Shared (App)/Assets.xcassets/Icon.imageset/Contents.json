@@ -1,14 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "Purity - 256px-Icon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Purity - 512px-Icon.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Purity - 1024px-Icon.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
