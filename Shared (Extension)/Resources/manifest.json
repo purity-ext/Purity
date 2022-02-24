@@ -7,34 +7,34 @@
     "version": "1.0",
 
     "icons": {
-        "48": "images/icon-48.png",
-        "96": "images/icon-96.png",
-        "128": "images/icon-128.png",
-        "256": "images/icon-256.png",
-        "512": "images/icon-512.png"
-    },
-
-    "background": {
-        "scripts": [ "background.js" ],
-        "persistent": false
+        "48": "images/Purity-48px-Icon.png",
+        "64": "images/Purity-64px-Icon.png",
+        "96": "images/Purity-96px-Icon.png",
+        "128": "images/Purity-128px-Icon.png",
+        "256": "images/Purity-256px-Icon.png",
+        "512": "images/Purity-512px-Icon.png",
+        "1024": "images/Purity-1024px-Icon.png"
     },
 
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [ "*://example.com/*" ]
+        "matches": [ "http://*/*", "https://*/*" ],
+        "run_at": "document_start"
     }],
 
     "browser_action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "images/toolbar-icon-16.png",
-            "19": "images/toolbar-icon-19.png",
-            "32": "images/toolbar-icon-32.png",
-            "38": "images/toolbar-icon-38.png",
-            "48": "images/toolbar-icon-48.png",
-            "72": "images/toolbar-icon-72.png"
+            "19": "images/Purity-19px-toolbar.png",
+            "32": "images/Purity-32px-toolbar.png",
+            "38": "images/Purity-38px-toolbar.png",
+            "48": "images/Purity-48px-toolbar.png",
+            "72": "images/Purity-72px-toolbar.png",
+            "128": "images/Purity-128px-toolbar.png"
         }
     },
 
-    "permissions": [ ]
+    "permissions": [
+        "activeTab"
+    ]
 }
