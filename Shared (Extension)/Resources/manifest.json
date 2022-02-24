@@ -4,6 +4,7 @@
 
     "name": "__MSG_extension_name__",
     "description": "__MSG_extension_description__",
+    "author": "Purity-ext",
     "version": "1.0",
 
     "icons": {

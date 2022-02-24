@@ -1,3 +1,5 @@
+let isSafari
+
 window.addEventListener(
   'contextmenu',
   event => {
@@ -5,6 +7,18 @@ window.addEventListener(
   },
   true
 )
+
+const checkSafari = () => {
+  const resp = browser.runtime.sendNativeMessage('')
+  resp.then(
+    ({ isSafari: safari }) => {
+      isSafari = safari ?? false
+    },
+    () => {
+      isSafari = false
+    }
+  )
+}
 
 document.addEventListener('DOMContentLoaded', () => {
   const removeAttr = element => {
