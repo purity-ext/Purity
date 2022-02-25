@@ -6,6 +6,10 @@
     "description": "__MSG_extension_description__",
     "author": "Purity-ext",
     "version": "1.0",
+    "developer": {
+        "name": "Purity-ext",
+        "url": "https://github.com/Purity-ext"
+    },
 
     "icons": {
         "48": "images/Purity-48px-Icon.png",
@@ -18,10 +22,15 @@
     },
 
     "content_scripts": [{
-        "js": [ "content.js" ],
+        "js": [ "utils.js", "content.js" ],
         "matches": [ "http://*/*", "https://*/*" ],
         "run_at": "document_start"
     }],
+
+    "background": {
+        "scripts": [ "background.js" ],
+        "persistent": false
+    },
 
     "browser_action": {
         "default_popup": "popup.html",
@@ -36,6 +45,8 @@
     },
 
     "permissions": [
-        "activeTab"
+        "activeTab",
+        "storage",
+        "nativeMessaging"
     ]
 }

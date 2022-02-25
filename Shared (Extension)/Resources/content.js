@@ -1,36 +1,44 @@
-let isSafari
+;(async () => {
+  const { blockedEvents } = await browser.getSyncValue({
+    blockedEvents: {}
+  })
 
-window.addEventListener(
-  'contextmenu',
-  event => {
-    event.stopPropagation()
-  },
-  true
-)
+  let events = blockedEvents[window.location.origin]
+  if (blockedEvents[window.location.origin] === undefined) {
+    const { defaultValue } = await browser.getSyncValue('defaultValue')
+    events = defaultValue ?? []
+    blockedEvents[window.location.origin] = events
+    await browser.setSyncValue({ blockedEvents })
+  }
 
-const checkSafari = () => {
-  const resp = browser.runtime.sendNativeMessage('', { isSafari: '' })
-  resp.then(
-    ({ isSafari: safari }) => {
-      isSafari = safari ?? false
-    },
-    () => {
-      isSafari = false
-    }
-  )
-}
+  for (const evt of events) {
+    window.addEventListener(
+      evt,
+      event => {
+        event.stopPropagation()
+      },
+      true
+    )
+  }
 
-document.addEventListener('DOMContentLoaded', () => {
   const removeAttr = element => {
-    if (element.children !== undefined) {
-      element.removeAttribute('oncontextmenu')
+    if (element.removeAttribute !== undefined) {
+      for (const evt of events) {
+        element.removeAttribute(`on${evt}`)
+      }
     }
     if (element.children !== undefined && element.children.length !== 0) {
-      for (const child in element.children) {
+      for (const child of element.children) {
         removeAttr(child)
       }
     }
   }
 
-  removeAttr(document.body)
-})
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      removeAttr(document.body)
+    })
+  } else {
+    removeAttr(document.body)
+  }
+})()

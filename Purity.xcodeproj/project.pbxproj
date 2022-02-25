@@ -13,6 +13,10 @@
 		555D1DAD27C6426B008464B5 /* PurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DAB27C6426B008464B5 /* PurityApp.swift */; };
 		555D1DB127C65450008464B5 /* ExtensionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DB027C65450008464B5 /* ExtensionState.swift */; };
 		555D1DB227C65450008464B5 /* ExtensionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DB027C65450008464B5 /* ExtensionState.swift */; };
+		555D1DB427C88E97008464B5 /* utils.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB327C88E97008464B5 /* utils.js */; };
+		555D1DB527C88E97008464B5 /* utils.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB327C88E97008464B5 /* utils.js */; };
+		555D1DB727C899E8008464B5 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB627C899E8008464B5 /* background.js */; };
+		555D1DB827C899E8008464B5 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB627C899E8008464B5 /* background.js */; };
 		55B238ED27C076FD002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238EC27C076FD002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B238F727C076FE002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238F627C076FE002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B238FD27C076FE002F3909 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238B827C076FC002F3909 /* Main.html */; };
@@ -90,6 +94,8 @@
 		555D1DAB27C6426B008464B5 /* PurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurityApp.swift; sourceTree = "<group>"; };
 		555D1DAE27C652FC008464B5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		555D1DB027C65450008464B5 /* ExtensionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionState.swift; sourceTree = "<group>"; };
+		555D1DB327C88E97008464B5 /* utils.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = utils.js; sourceTree = "<group>"; };
+		555D1DB627C899E8008464B5 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
 		55B238B927C076FC002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		55B238BA27C076FC002F3909 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		55B238BB27C076FC002F3909 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
@@ -210,6 +216,8 @@
 				55B238C727C076FD002F3909 /* popup.html */,
 				55B238C827C076FD002F3909 /* popup.css */,
 				55B238C927C076FD002F3909 /* popup.js */,
+				555D1DB327C88E97008464B5 /* utils.js */,
+				555D1DB627C899E8008464B5 /* background.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -411,6 +419,8 @@
 				55B2391527C076FE002F3909 /* popup.html in Resources */,
 				55B2390D27C076FE002F3909 /* images in Resources */,
 				55B2390F27C076FE002F3909 /* manifest.json in Resources */,
+				555D1DB727C899E8008464B5 /* background.js in Resources */,
+				555D1DB427C88E97008464B5 /* utils.js in Resources */,
 				55B2390B27C076FE002F3909 /* _locales in Resources */,
 				55B2391327C076FE002F3909 /* content.js in Resources */,
 				55B2391927C076FE002F3909 /* popup.js in Resources */,
@@ -425,6 +435,8 @@
 				55B2391627C076FE002F3909 /* popup.html in Resources */,
 				55B2390E27C076FE002F3909 /* images in Resources */,
 				55B2391027C076FE002F3909 /* manifest.json in Resources */,
+				555D1DB827C899E8008464B5 /* background.js in Resources */,
+				555D1DB527C88E97008464B5 /* utils.js in Resources */,
 				55B2390C27C076FE002F3909 /* _locales in Resources */,
 				55B2391427C076FE002F3909 /* content.js in Resources */,
 				55B2391A27C076FE002F3909 /* popup.js in Resources */,

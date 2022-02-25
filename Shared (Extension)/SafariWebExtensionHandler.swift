@@ -7,18 +7,19 @@
 
 import SafariServices
 
-let SFExtensionMessageKey = "message"
-
 class SafariWebExtensionHandler: NSObject, NSExtensionRequestHandling {
 
     func beginRequest(with context: NSExtensionContext) {
         let item = context.inputItems[0] as! NSExtensionItem
-        if item.userInfo?["isSafari"] != nil {
+        let requests = item.userInfo?["message"] as? [String: Any]
+        if requests?["isSafari"] != nil {
             let response = NSExtensionItem()
-            response.userInfo = ["isSafari": true]
+            response.userInfo = ["message": ["isSafari": true]]
 
             context.completeRequest(returningItems: [response], completionHandler: nil)
+            return
         }
+        context.completeRequest(returningItems: nil, completionHandler: nil)
     }
 
 }
