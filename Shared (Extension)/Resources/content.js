@@ -9,7 +9,7 @@ window.addEventListener(
 )
 
 const checkSafari = () => {
-  const resp = browser.runtime.sendNativeMessage('')
+  const resp = browser.runtime.sendNativeMessage('', { isSafari: '' })
   resp.then(
     ({ isSafari: safari }) => {
       isSafari = safari ?? false
