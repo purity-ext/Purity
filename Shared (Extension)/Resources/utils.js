@@ -1,9 +1,9 @@
 let isSafari
 
-browser.checkSafari = async () => {
+chrome.checkSafari = async () => {
   if (isSafari === undefined) {
     try {
-      const { isSafari: safari } = await browser.runtime.sendMessage({
+      const { isSafari: safari } = await chrome.runtime.sendMessage({
         native: {
           isSafari: ''
         }
@@ -19,9 +19,9 @@ browser.checkSafari = async () => {
   }
 }
 
-browser.setSyncValue = async keys => {
-  if (await browser.checkSafari()) {
-    const { error } = await browser.runtime.sendMessage({
+chrome.setSyncValue = async keys => {
+  if (await chrome.checkSafari()) {
+    const { error } = await chrome.runtime.sendMessage({
       native: {
         setValue: keys
       }
@@ -30,13 +30,13 @@ browser.setSyncValue = async keys => {
       throw new Error(error)
     }
   } else {
-    await browser.storage.sync.set(keys)
+    await chrome.storage.sync.set(keys)
   }
 }
 
-browser.getSyncValue = async keys => {
-  if (await browser.checkSafari()) {
-    const resp = await browser.runtime.sendMessage({
+chrome.getSyncValue = async keys => {
+  if (await chrome.checkSafari()) {
+    const resp = await chrome.runtime.sendMessage({
       native: {
         getValue: keys
       }
@@ -47,6 +47,6 @@ browser.getSyncValue = async keys => {
       return resp
     }
   } else {
-    return await browser.storage.sync.get(keys)
+    return await chrome.storage.sync.get(keys)
   }
 }

@@ -1,14 +1,14 @@
 ;(async () => {
-  const { blockedEvents } = await browser.getSyncValue({
+  const { blockedEvents } = await chrome.getSyncValue({
     blockedEvents: {}
   })
 
   let events = blockedEvents[window.location.origin]
   if (blockedEvents[window.location.origin] === undefined) {
-    const { defaultValue } = await browser.getSyncValue('defaultValue')
+    const { defaultValue } = await chrome.getSyncValue('defaultValue')
     events = defaultValue ?? []
     blockedEvents[window.location.origin] = events
-    await browser.setSyncValue({ blockedEvents })
+    await chrome.setSyncValue({ blockedEvents })
   }
 
   for (const evt of events) {
