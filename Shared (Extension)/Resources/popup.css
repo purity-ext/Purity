@@ -55,7 +55,7 @@ input[type=checkbox] {
     border-radius: 0.25rem;
     border: 2px solid #D1D5DB;
     overflow-y: auto;
-    background: rgba( 250, 250, 249, 0.25 );
+    background: rgba( 255, 255, 255, 0.65 );
     backdrop-filter: blur( 5px );
     -webkit-backdrop-filter: blur( 5px );
 }
@@ -102,7 +102,7 @@ input[type=checkbox] {
 @media (prefers-color-scheme: dark) {
     .blocks {
         border: 2px solid #374151;
-        background: rgba( 28, 25, 23, 0.5 );
+        background: rgba( 0, 0, 0, 0.65 );
     }
     
     .blocks > .block {
