@@ -3,11 +3,97 @@
 }
 
 body {
-    width: 100px;
-    padding: 10px;
+    width: 16rem;
+    padding: 1rem;
 
     font-family: system-ui;
-    text-align: center;
+    word-break: keep-all;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    margin: 0;
+}
+
+.title-text {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.column-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+input[type=checkbox] {
+    zoom: 1.2;
+}
+
+.check-activate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.blocks {
+    width: 100%;
+    height: 24rem;
+    border-radius: 0.25rem;
+    border: 2px solid #D1D5DB;
+    overflow-y: auto;
+}
+
+.blocks > .block {
+    padding: 0.5rem;
+    border-bottom: 1px solid #D1D5DB;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.blocks > .append-block {
+    padding: 0.5rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #6B7280;
+    font-size: 0.875rem;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.remove-button {
+    padding: 0.25rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+input[type=checkbox] {
+    margin-right: 0.33333333ch;
+}
+
+.footer-text {
+    margin-right: auto;
+    font-size: 0.75rem;
 }
 
 @media (prefers-color-scheme: dark) {
