@@ -55,6 +55,9 @@ input[type=checkbox] {
     border-radius: 0.25rem;
     border: 2px solid #D1D5DB;
     overflow-y: auto;
+    background: rgba( 250, 250, 249, 0.25 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
 }
 
 .blocks > .block {
@@ -71,7 +74,7 @@ input[type=checkbox] {
     display: flex;
     align-items: center;
     cursor: pointer;
-    color: #6B7280;
+    color: #4B5563;
     font-size: 0.875rem;
 }
 
@@ -84,11 +87,11 @@ input[type=checkbox] {
     border: 0;
     background: transparent;
     cursor: pointer;
-    color: white;
+    color: black;
 }
 
 input[type=checkbox] {
-    margin-right: 0.33333333ch;
+    margin-right: 0.6ch;
 }
 
 .footer-text {
@@ -97,5 +100,20 @@ input[type=checkbox] {
 }
 
 @media (prefers-color-scheme: dark) {
-    /* Dark Mode styles go here. */
+    .blocks {
+        border: 2px solid #374151;
+        background: rgba( 28, 25, 23, 0.5 );
+    }
+    
+    .blocks > .block {
+        border-bottom: 1px solid #374151;
+    }
+    
+    .blocks > .append-block {
+        color: #9CA3AF;
+    }
+    
+    .remove-button {
+        color: white;
+    }
 }
