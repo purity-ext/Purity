@@ -82,12 +82,11 @@ input[type=checkbox] {
     flex-grow: 1;
 }
 
-.remove-button {
+.list-button {
     padding: 0.25rem;
     border: 0;
     background: transparent;
     cursor: pointer;
-    color: black;
 }
 
 input[type=checkbox] {
@@ -97,6 +96,12 @@ input[type=checkbox] {
 .footer-text {
     margin-right: auto;
     font-size: 0.75rem;
+}
+
+.append-textbox {
+    background: none;
+    border: 0;
+    width: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -111,9 +116,5 @@ input[type=checkbox] {
     
     .blocks > .append-block {
         color: #9CA3AF;
-    }
-    
-    .remove-button {
-        color: white;
     }
 }

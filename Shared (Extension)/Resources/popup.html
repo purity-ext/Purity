@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="popup.css" />
     <link rel="stylesheet" href="normalize.css" />
+    <script src="browser-polyfill.js"></script>
     <script src="utils.js"></script>
     <script src="popup.js"></script>
     <title>Purity</title>
@@ -22,20 +23,25 @@
         <div class="block">
           <p>Test</p>
           <div class="spacer"></div>
-          <button class="remove-button">﹣</button>
+          <button class="list-button">﹣</button>
         </div>
         <div class="block">
           <p>Test</p>
           <div class="spacer"></div>
-          <button class="remove-button">﹣</button>
+          <button class="list-button">﹣</button>
         </div>
         <div class="block">
           <p>Test</p>
           <div class="spacer"></div>
-          <button class="remove-button">﹣</button>
+          <button class="list-button">﹣</button>
         </div>
-        <div class="append-block">
-          <p>Click here to add more...</p>
+        <div class="append-block" style="cursor: default">
+          <input
+            type="text"
+            class="append-textbox"
+            placeholder="Type events (comma separated)"
+          />
+          <button class="list-button">﹢</button>
         </div>
       </div>
       <footer class="footer-text">
