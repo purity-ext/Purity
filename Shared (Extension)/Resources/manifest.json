@@ -44,5 +44,10 @@
         "activeTab",
         "storage",
         "nativeMessaging"
-    ]
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "{CF5ECA06-F807-4AFD-9ACE-0D9FBC602AAF}"
+        }
+    }
 }
