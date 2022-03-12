@@ -5,7 +5,7 @@ const removeFromList = async event => {
   const { blockedEvents } = await browser.getSyncValue({
     blockedEvents: {}
   })
-  const [{ url: _url }] = await browser.tabs.query({
+  const [{ url: _url, id }] = await browser.tabs.query({
     active: true,
     currentWindow: true
   })
@@ -17,6 +17,7 @@ const removeFromList = async event => {
     blockedEvents
   })
   parent.remove()
+  await browser.tabs.reload(id)
 }
 
 const addToList = async () => {
@@ -29,7 +30,7 @@ const addToList = async () => {
   const { blockedEvents } = await browser.getSyncValue({
     blockedEvents: {}
   })
-  const [{ url: _url }] = await browser.tabs.query({
+  const [{ url: _url, id }] = await browser.tabs.query({
     active: true,
     currentWindow: true
   })
@@ -48,6 +49,7 @@ const addToList = async () => {
   const [appendBlock] = document.getElementsByClassName('append-block')
   const block = makeBlock(event)
   appendBlock.before(block)
+  await browser.tabs.reload(id)
 }
 
 const makeBlock = eventName => {
@@ -70,15 +72,36 @@ const makeBlock = eventName => {
   return block
 }
 
+const toggleEnable = async event => {
+  const { isEnabled } = await browser.getSyncValue({
+    isEnabled: {}
+  })
+  const [{ url: _url, id }] = await browser.tabs.query({
+    active: true,
+    currentWindow: true
+  })
+  const url = new URL(_url).origin
+  isEnabled[url] = event.target.checked
+  await browser.setSyncValue({
+    isEnabled
+  })
+  await browser.tabs.reload(id)
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
-  const { blockedEvents } = await browser.getSyncValue({
-    blockedEvents: {}
+  const { blockedEvents, isEnabled } = await browser.getSyncValue({
+    blockedEvents: {},
+    isEnabled: {}
   })
   const [{ url: _url }] = await browser.tabs.query({
     active: true,
     currentWindow: true
   })
   const url = new URL(_url).origin
+
+  const checkbox = document.getElementById('enabled')
+  checkbox.checked = isEnabled[url] ?? true
+  checkbox.addEventListener('input', toggleEnable)
 
   const [appendBlock] = document.getElementsByClassName('append-block')
   for (const eventName of blockedEvents[url] ?? []) {

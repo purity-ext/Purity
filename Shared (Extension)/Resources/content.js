@@ -1,4 +1,11 @@
 ;(async () => {
+  const { isEnabled } = await browser.getSyncValue({
+    isEnabled: {}
+  })
+  if (!(isEnabled[window.location.origin] ?? true)) {
+    return
+  }
+
   const { blockedEvents } = await browser.getSyncValue({
     blockedEvents: {}
   })
