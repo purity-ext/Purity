@@ -21,31 +21,36 @@ const removeFromList = async event => {
 
 const addToList = async () => {
   const [inputElement] = document.getElementsByClassName('append-textbox')
-  const event = inputElement.value
-  if (event.length === 0) {
+  const eventInput = inputElement.value
+  if (eventInput.length === 0) {
     return
   }
+  const events = eventInput.split(',')
   const [{ url: _url, id }] = await browser.tabs.query({
     active: true,
     currentWindow: true
   })
   const url = new URL(_url).origin
-  let [blockedEvents] = await browser.getValue(url)
-  if (blockedEvents?.some(evt => evt === event)) {
-    return
-  }
 
-  blockedEvents = [...(blockedEvents ?? []), ...event.split(',')]
+  let [blockedEvents] = await browser.getValue(url)
+  const [appendBlock] = document.getElementsByClassName('append-block')
+  events.forEach(async e => {
+    e = e.trim()
+    if (blockedEvents?.some(evt => evt === e)) {
+      return
+    }
+
+    blockedEvents = [...(blockedEvents ?? []), e]
+
+    const block = makeBlock(eventInput)
+    appendBlock.before(block)
+  })
   await browser.setValue({
     blockedEvents,
     url
   })
 
   inputElement.value = ''
-
-  const [appendBlock] = document.getElementsByClassName('append-block')
-  const block = makeBlock(event)
-  appendBlock.before(block)
   await browser.tabs.reload(id)
 }
 

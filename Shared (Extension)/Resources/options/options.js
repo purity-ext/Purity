@@ -70,23 +70,27 @@ const removeFromList = async event => {
 
 const addToList = async () => {
   const [inputElement] = document.getElementsByClassName('append-textbox')
-  const event = inputElement.value
-  if (event.length === 0) {
+  const eventInput = inputElement.value
+  if (eventInput.length === 0) {
     return
   }
-  let defaultValue = await browser.getValue('defaultValue')
-  if (defaultValue?.some(evt => evt === event)) {
-    return
-  }
-
-  defaultValue = [...(defaultValue ?? []), ...event.split(',')]
-  await browser.setValue({ defaultValue })
-
-  inputElement.value = ''
+  const events = eventInput.split(',')
 
   const [appendBlock] = document.getElementsByClassName('append-block')
-  const block = makeBlock(event)
-  appendBlock.before(block)
+  let defaultValue = await browser.getValue('defaultValue')
+  events.forEach(async e => {
+    e = e.trim()
+    if (defaultValue?.some(evt => evt === e)) {
+      return
+    }
+
+    defaultValue = [...(defaultValue ?? []), e]
+    const block = makeBlock(e)
+    appendBlock.before(block)
+  })
+
+  await browser.setValue({ defaultValue })
+  inputElement.value = ''
 }
 
 const makeBlock = eventName => {
