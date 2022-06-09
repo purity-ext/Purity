@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551A207127DC741B00D76222 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551A207027DC741B00D76222 /* CloudKit.framework */; };
+		551A207427DC744400D76222 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551A207327DC744400D76222 /* CloudKit.framework */; };
+		551A207627DC744C00D76222 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551A207327DC744400D76222 /* CloudKit.framework */; };
+		551A207727DC745400D76222 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551A207027DC741B00D76222 /* CloudKit.framework */; };
 		555D1DA727C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
 		555D1DA827C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
 		555D1DAC27C6426B008464B5 /* PurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DAB27C6426B008464B5 /* PurityApp.swift */; };
@@ -15,18 +19,8 @@
 		555D1DB227C65450008464B5 /* ExtensionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DB027C65450008464B5 /* ExtensionState.swift */; };
 		555D1DB427C88E97008464B5 /* utils.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB327C88E97008464B5 /* utils.js */; };
 		555D1DB527C88E97008464B5 /* utils.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB327C88E97008464B5 /* utils.js */; };
-		555D1DB727C899E8008464B5 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB627C899E8008464B5 /* background.js */; };
-		555D1DB827C899E8008464B5 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB627C899E8008464B5 /* background.js */; };
 		55B238ED27C076FD002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238EC27C076FD002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B238F727C076FE002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238F627C076FE002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		55B238FD27C076FE002F3909 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238B827C076FC002F3909 /* Main.html */; };
-		55B238FE27C076FE002F3909 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 55B238B827C076FC002F3909 /* Main.html */; };
-		55B238FF27C076FE002F3909 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BA27C076FC002F3909 /* Icon.png */; };
-		55B2390027C076FE002F3909 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BA27C076FC002F3909 /* Icon.png */; };
-		55B2390127C076FE002F3909 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BB27C076FC002F3909 /* Style.css */; };
-		55B2390227C076FE002F3909 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BB27C076FC002F3909 /* Style.css */; };
-		55B2390327C076FE002F3909 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BC27C076FC002F3909 /* Script.js */; };
-		55B2390427C076FE002F3909 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BC27C076FC002F3909 /* Script.js */; };
 		55B2390727C076FE002F3909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BE27C076FD002F3909 /* Assets.xcassets */; };
 		55B2390827C076FE002F3909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BE27C076FD002F3909 /* Assets.xcassets */; };
 		55B2390927C076FE002F3909 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */; };
@@ -45,6 +39,8 @@
 		55B2391827C076FE002F3909 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C827C076FD002F3909 /* popup.css */; };
 		55B2391927C076FE002F3909 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C927C076FD002F3909 /* popup.js */; };
 		55B2391A27C076FE002F3909 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 55B238C927C076FD002F3909 /* popup.js */; };
+		55FC2B7B284F2ADB004B9788 /* options in Resources */ = {isa = PBXBuildFile; fileRef = 55FC2B7A284F2ADB004B9788 /* options */; };
+		55FC2B7C284F2ADB004B9788 /* options in Resources */ = {isa = PBXBuildFile; fileRef = 55FC2B7A284F2ADB004B9788 /* options */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,16 +86,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		551A207027DC741B00D76222 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		551A207227DC744200D76222 /* Purity (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Purity (iOS).entitlements"; sourceTree = "<group>"; };
+		551A207327DC744400D76222 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		551A207527DC744B00D76222 /* Purity Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Purity Extension (iOS).entitlements"; sourceTree = "<group>"; };
 		555D1DA627C64117008464B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		555D1DAB27C6426B008464B5 /* PurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurityApp.swift; sourceTree = "<group>"; };
 		555D1DAE27C652FC008464B5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		555D1DB027C65450008464B5 /* ExtensionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionState.swift; sourceTree = "<group>"; };
 		555D1DB327C88E97008464B5 /* utils.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = utils.js; sourceTree = "<group>"; };
-		555D1DB627C899E8008464B5 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
-		55B238B927C076FC002F3909 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
-		55B238BA27C076FC002F3909 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		55B238BB27C076FC002F3909 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
-		55B238BC27C076FC002F3909 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
 		55B238BE27C076FD002F3909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		55B238C227C076FD002F3909 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
@@ -118,6 +113,7 @@
 		55B238F627C076FE002F3909 /* Purity Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Purity Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55B238FB27C076FE002F3909 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55B238FC27C076FE002F3909 /* Purity.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Purity.entitlements; sourceTree = "<group>"; };
+		55FC2B7A284F2ADB004B9788 /* options */ = {isa = PBXFileReference; lastKnownFileType = folder; path = options; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551A207427DC744400D76222 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551A207127DC741B00D76222 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551A207627DC744C00D76222 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,12 +145,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				551A207727DC745400D76222 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		551A206F27DC741B00D76222 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				551A207327DC744400D76222 /* CloudKit.framework */,
+				551A207027DC741B00D76222 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		555D1DAF27C653FF008464B5 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +172,8 @@
 		55B238B127C076FB002F3909 = {
 			isa = PBXGroup;
 			children = (
+				551A207527DC744B00D76222 /* Purity Extension (iOS).entitlements */,
+				551A207227DC744200D76222 /* Purity (iOS).entitlements */,
 				555D1DAE27C652FC008464B5 /* LICENSE */,
 				55B238B627C076FC002F3909 /* Shared (App) */,
 				55B238BF27C076FD002F3909 /* Shared (Extension) */,
@@ -171,6 +182,7 @@
 				55B238F027C076FD002F3909 /* iOS (Extension) */,
 				55B238FA27C076FE002F3909 /* macOS (Extension) */,
 				55B238CF27C076FD002F3909 /* Products */,
+				551A206F27DC741B00D76222 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,22 +191,10 @@
 			children = (
 				555D1DAF27C653FF008464B5 /* Enums */,
 				55B238BE27C076FD002F3909 /* Assets.xcassets */,
-				55B238B727C076FC002F3909 /* Resources */,
 				555D1DA627C64117008464B5 /* ContentView.swift */,
 				555D1DAB27C6426B008464B5 /* PurityApp.swift */,
 			);
 			path = "Shared (App)";
-			sourceTree = "<group>";
-		};
-		55B238B727C076FC002F3909 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				55B238B827C076FC002F3909 /* Main.html */,
-				55B238BA27C076FC002F3909 /* Icon.png */,
-				55B238BB27C076FC002F3909 /* Style.css */,
-				55B238BC27C076FC002F3909 /* Script.js */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		55B238BF27C076FD002F3909 /* Shared (Extension) */ = {
@@ -209,6 +209,7 @@
 		55B238C127C076FD002F3909 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				55FC2B7A284F2ADB004B9788 /* options */,
 				55B238C227C076FD002F3909 /* _locales */,
 				55B238C327C076FD002F3909 /* images */,
 				55B238C427C076FD002F3909 /* manifest.json */,
@@ -217,7 +218,6 @@
 				55B238C827C076FD002F3909 /* popup.css */,
 				55B238C927C076FD002F3909 /* popup.js */,
 				555D1DB327C88E97008464B5 /* utils.js */,
-				555D1DB627C899E8008464B5 /* background.js */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -349,7 +349,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					55B238CD27C076FD002F3909 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -391,11 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55B238FF27C076FE002F3909 /* Icon.png in Resources */,
-				55B238FD27C076FE002F3909 /* Main.html in Resources */,
-				55B2390327C076FE002F3909 /* Script.js in Resources */,
 				55B2390727C076FE002F3909 /* Assets.xcassets in Resources */,
-				55B2390127C076FE002F3909 /* Style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,11 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55B2390027C076FE002F3909 /* Icon.png in Resources */,
-				55B2390227C076FE002F3909 /* Style.css in Resources */,
-				55B2390427C076FE002F3909 /* Script.js in Resources */,
 				55B2390827C076FE002F3909 /* Assets.xcassets in Resources */,
-				55B238FE27C076FE002F3909 /* Main.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,11 +407,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FC2B7B284F2ADB004B9788 /* options in Resources */,
 				55B2391727C076FE002F3909 /* popup.css in Resources */,
 				55B2391527C076FE002F3909 /* popup.html in Resources */,
 				55B2390D27C076FE002F3909 /* images in Resources */,
 				55B2390F27C076FE002F3909 /* manifest.json in Resources */,
-				555D1DB727C899E8008464B5 /* background.js in Resources */,
 				555D1DB427C88E97008464B5 /* utils.js in Resources */,
 				55B2390B27C076FE002F3909 /* _locales in Resources */,
 				55B2391327C076FE002F3909 /* content.js in Resources */,
@@ -431,11 +423,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FC2B7C284F2ADB004B9788 /* options in Resources */,
 				55B2391827C076FE002F3909 /* popup.css in Resources */,
 				55B2391627C076FE002F3909 /* popup.html in Resources */,
 				55B2390E27C076FE002F3909 /* images in Resources */,
 				55B2391027C076FE002F3909 /* manifest.json in Resources */,
-				555D1DB827C899E8008464B5 /* background.js in Resources */,
 				555D1DB527C88E97008464B5 /* utils.js in Resources */,
 				55B2390C27C076FE002F3909 /* _locales in Resources */,
 				55B2391427C076FE002F3909 /* content.js in Resources */,
@@ -496,17 +488,6 @@
 			targetProxy = 55B238F827C076FE002F3909 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		55B238B827C076FC002F3909 /* Main.html */ = {
-			isa = PBXVariantGroup;
-			children = (
-				55B238B927C076FC002F3909 /* Base */,
-			);
-			name = Main.html;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		55B2391B27C076FE002F3909 /* Debug */ = {
@@ -623,6 +604,7 @@
 		55B2391E27C076FE002F3909 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Purity Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
@@ -654,6 +636,7 @@
 		55B2391F27C076FE002F3909 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Purity Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
@@ -689,6 +672,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Purity (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
@@ -726,6 +710,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Purity (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
@@ -762,6 +747,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Purity.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
@@ -794,6 +780,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Purity.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
@@ -829,6 +816,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Purity.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
@@ -863,6 +851,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Purity.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;

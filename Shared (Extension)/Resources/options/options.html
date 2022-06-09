@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="options.css" />
+    <link rel="stylesheet" href="normalize.css" />
+    <script src="utils.js"></script>
+    <script src="options.js"></script>
+    <title>Purity Settings</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Purity Settings</h1>
+      <div class="divider"></div>
+      <h2>Default Blocked Events</h2>
+      <div class="blocks">
+        <div class="append-block" style="cursor: default">
+          <input
+            type="text"
+            class="append-textbox"
+            placeholder="Type events (comma separated)"
+          />
+          <button id="add-event" class="list-button">﹢</button>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <h2>Import / Export</h2>
+      <div class="import-export">
+        <input id="file-picker" type="file" style="display: none" />
+        <button class="primary-button" id="import-button">Import</button>
+        <button class="primary-button" id="export-button">Export</button>
+      </div>
+    </div>
+  </body>
+</html>

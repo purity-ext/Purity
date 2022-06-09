@@ -1,24 +1,21 @@
 ;(async () => {
-  const { isEnabled } = await browser.getSyncValue({
-    isEnabled: {}
-  })
-  if (!(isEnabled[window.location.origin] ?? true)) {
+  let [blockedEvents, isEnabled] = await browser.getValue(
+    window.location.origin
+  )
+  if (!isEnabled) {
     return
   }
 
-  const { blockedEvents } = await browser.getSyncValue({
-    blockedEvents: {}
-  })
-
-  let events = blockedEvents[window.location.origin]
-  if (blockedEvents[window.location.origin] === undefined) {
-    const { defaultValue } = await browser.getSyncValue('defaultValue')
-    events = defaultValue ?? []
-    blockedEvents[window.location.origin] = events
-    await browser.setSyncValue({ blockedEvents })
+  if (blockedEvents === undefined) {
+    const defaultValue = await browser.getValue('defaultValue')
+    blockedEvents = defaultValue ?? []
+    await browser.setValue({
+      url: window.location.origin,
+      blockedEvents
+    })
   }
 
-  for (const evt of events) {
+  for (const evt of blockedEvents) {
     window.addEventListener(
       evt,
       event => {
@@ -30,7 +27,7 @@
 
   const removeAttr = element => {
     if (element.removeAttribute !== undefined) {
-      for (const evt of events) {
+      for (const evt of blockedEvents) {
         element.removeAttribute(`on${evt}`)
       }
     }

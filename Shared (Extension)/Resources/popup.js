@@ -2,19 +2,18 @@ const removeFromList = async event => {
   const parent = event.target.parentElement
   const eventID = parent.getAttribute('data-event')
 
-  const { blockedEvents } = await browser.getSyncValue({
-    blockedEvents: {}
-  })
   const [{ url: _url, id }] = await browser.tabs.query({
     active: true,
     currentWindow: true
   })
   const url = new URL(_url).origin
-  if (blockedEvents[url] !== undefined) {
-    blockedEvents[url] = blockedEvents[url].filter(evt => evt !== eventID)
+  let [blockedEvents] = await browser.getValue(url)
+  if (blockedEvents !== undefined) {
+    blockedEvents = blockedEvents.filter(evt => evt !== eventID)
   }
-  await browser.setSyncValue({
-    blockedEvents
+  await browser.setValue({
+    blockedEvents,
+    url
   })
   parent.remove()
   await browser.tabs.reload(id)
@@ -26,22 +25,20 @@ const addToList = async () => {
   if (event.length === 0) {
     return
   }
-
-  const { blockedEvents } = await browser.getSyncValue({
-    blockedEvents: {}
-  })
   const [{ url: _url, id }] = await browser.tabs.query({
     active: true,
     currentWindow: true
   })
   const url = new URL(_url).origin
-  if (blockedEvents[url]?.some(evt => evt === event)) {
+  let [blockedEvents] = await browser.getValue(url)
+  if (blockedEvents?.some(evt => evt === event)) {
     return
   }
 
-  blockedEvents[url] = [...(blockedEvents[url] ?? []), ...event.split(',')]
-  await browser.setSyncValue({
-    blockedEvents
+  blockedEvents = [...(blockedEvents ?? []), ...event.split(',')]
+  await browser.setValue({
+    blockedEvents,
+    url
   })
 
   inputElement.value = ''
@@ -73,38 +70,32 @@ const makeBlock = eventName => {
 }
 
 const toggleEnable = async event => {
-  const { isEnabled } = await browser.getSyncValue({
-    isEnabled: {}
-  })
   const [{ url: _url, id }] = await browser.tabs.query({
     active: true,
     currentWindow: true
   })
   const url = new URL(_url).origin
-  isEnabled[url] = event.target.checked
-  await browser.setSyncValue({
-    isEnabled
+  await browser.setValue({
+    isEnabled: event.target.checked,
+    url
   })
   await browser.tabs.reload(id)
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const { blockedEvents, isEnabled } = await browser.getSyncValue({
-    blockedEvents: {},
-    isEnabled: {}
-  })
   const [{ url: _url }] = await browser.tabs.query({
     active: true,
     currentWindow: true
   })
   const url = new URL(_url).origin
+  const [blockedEvents, isEnabled] = await browser.getValue(url)
 
   const checkbox = document.getElementById('enabled')
-  checkbox.checked = isEnabled[url] ?? true
+  checkbox.checked = isEnabled ?? true
   checkbox.addEventListener('input', toggleEnable)
 
   const [appendBlock] = document.getElementsByClassName('append-block')
-  for (const eventName of blockedEvents[url] ?? []) {
+  for (const eventName of blockedEvents ?? []) {
     const block = makeBlock(eventName)
     appendBlock.before(block)
   }
