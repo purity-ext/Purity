@@ -1,10 +1,15 @@
+:root {
+  color-scheme: light dark;
+}
+
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .container {
   padding: 1rem;
   max-width: 1024px;
+  margin: 0 auto;
 }
 
 .divider {
@@ -22,16 +27,15 @@ p {
   max-width: 16rem;
   height: 24rem;
   border-radius: 0.25rem;
-  border: 2px solid #D1D5DB;
+  border: 2px solid #d1d5db;
   overflow-y: auto;
-  background: rgba( 255, 255, 255, 0.65 );
-  backdrop-filter: blur( 5px );
-  -webkit-backdrop-filter: blur( 5px );
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .blocks > .block {
   padding: 0.5rem;
-  border-bottom: 1px solid #D1D5DB;
+  border-bottom: 1px solid #d1d5db;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -43,7 +47,7 @@ p {
   display: flex;
   align-items: center;
   cursor: pointer;
-  color: #4B5563;
+  color: #4b5563;
   font-size: 0.875rem;
 }
 
@@ -79,4 +83,27 @@ p {
 .primary-button:hover {
   background-color: darkgray;
   transition: background-color ease-in-out 0.1s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .blocks {
+    border: 2px solid #374151;
+  }
+
+  .blocks > .block {
+    border-bottom: 1px solid #374151;
+  }
+
+  .blocks > .append-block {
+    color: #9ca3af;
+  }
+
+  .primary-button {
+    color: white;
+    background-color: gray;
+  }
+
+  .primary-button:hover {
+    background-color: rgb(86, 86, 86);
+  }
 }
