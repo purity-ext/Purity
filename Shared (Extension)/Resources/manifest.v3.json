@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "default_locale": "en",
 
     "name": "__MSG_extension_name__",
@@ -18,12 +18,12 @@
     },
 
     "content_scripts": [{
-        "js": [ "utils.js", "content.js" ],
+        "js": [ "browser-polyfill.min.js", "utils.js", "content.js" ],
         "matches": [ "http://*/*", "https://*/*" ],
         "run_at": "document_start"
     }],
 
-    "browser_action": {
+    "action": {
         "default_popup": "popup.html",
         "default_icon": {
             "19": "images/Purity-19px-toolbar.png",
@@ -39,11 +39,6 @@
         "activeTab",
         "storage"
     ],
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "{CF5ECA06-F807-4AFD-9ACE-0D9FBC602AAF}"
-        }
-    },
     "options_ui": {
         "page": "options/options.html"
     }
