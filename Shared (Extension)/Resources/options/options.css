@@ -85,7 +85,32 @@ p {
   transition: background-color ease-in-out 0.1s;
 }
 
+.red-button {
+  background-color: #dc2626;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color ease-in-out 0.1s;
+}
+
+.red-button:hover {
+  background-color: #ef4444;
+  transition: background-color ease-in-out 0.1s;
+}
+
 @media (prefers-color-scheme: dark) {
+  body {
+    background-color: #171717;
+  }
+
+  h1, h2, p {
+    color: white;
+  }
+
   .blocks {
     border: 2px solid #374151;
   }

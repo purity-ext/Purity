@@ -8,9 +8,23 @@ const exportAsJSON = async () => {
 }
 
 const importFromJSON = async json => {
-  const result = JSON.parse(json)
-  await browser.storage.local.set(result)
-  alert('Settings imported. Reload to see the change!')
+  // to block importing any weird datas
+  const { blockedEvents, isEnabled, defaultValue } = JSON.parse(json)
+  await browser.storage.local.set({
+    blockedEvents,
+    isEnabled,
+    defaultValue
+  })
+  window.location.reload()
+}
+
+const resetData = async () => {
+  await browser.storage.local.set({
+    blockedEvents: {},
+    isEnabled: {},
+    defaultValue: []
+  })
+  window.location.reload()
 }
 
 const download = (filename, text) => {
@@ -127,4 +141,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   })
   const addButton = document.getElementById('add-event')
   addButton.addEventListener('click', addToList)
+
+  const resetButton = document.getElementById('delete-button')
+  resetButton.addEventListener('click', async () => {
+    const lastChance = confirm('Are you sure about resetting every data?')
+    if (lastChance) {
+      await resetData()
+    }
+  })
 })
