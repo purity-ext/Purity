@@ -116,6 +116,38 @@ const makeBlock = eventName => {
   return block
 }
 
+const savePreset = async name => {
+  const blockedEvents = await browser.getValue('defaultValue')
+
+  await browser.setValue({
+    presetName: name,
+    blockedEvents
+  })
+  const saveLoadElement = document.getElementById('preset-save-or-load')
+  saveLoadElement.innerText = 'Load'
+}
+
+const loadPreset = async name => {
+  const blockedEvents = await browser.getValue(name, true)
+  await browser.setValue({
+    defaultValue: blockedEvents
+  })
+  window.location.reload()
+}
+
+const saveLoadPreset = async () => {
+  const presetInputElement = document.getElementById('preset-textbox')
+  if (presetInputElement.value.length !== 0) {
+    if (
+      (await browser.getValue(presetInputElement.value, true)) !== undefined
+    ) {
+      loadPreset(presetInputElement.value)
+    } else {
+      savePreset(presetInputElement.value)
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('import-button').addEventListener('click', () => {
     document.getElementById('file-picker').addEventListener('change', event => {
@@ -132,6 +164,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     })
 
   const defaultValue = await browser.getValue('defaultValue')
+  const presets = await browser.getValue('presets')
 
   const [appendBlock] = document.getElementsByClassName('append-block')
   for (const eventName of defaultValue ?? []) {
@@ -139,17 +172,42 @@ document.addEventListener('DOMContentLoaded', async () => {
     appendBlock.before(block)
   }
 
-  const [inputElement] = document.getElementsByClassName('append-textbox')
+  const datalist = document.getElementById('preset-list')
+  Object.keys(presets).forEach(async name => {
+    const option = document.createElement('option')
+    option.value = name
+    datalist.appendChild(option)
+  })
+
+  const inputElement = document.getElementById('append-textbox')
+  const saveLoadElement = document.getElementById('preset-save-or-load')
+  const presetInputElement = document.getElementById('preset-textbox')
+  const addButton = document.getElementById('add-event')
+  const resetButton = document.getElementById('delete-button')
+
   inputElement.addEventListener('keydown', event => {
     if (event.keyCode === 13) {
       event.preventDefault()
       addToList()
     }
   })
-  const addButton = document.getElementById('add-event')
+  presetInputElement.addEventListener('input', async event => {
+    if (event.target.value.length !== 0) {
+      if ((await browser.getValue(event.target.value, true)) !== undefined) {
+        saveLoadElement.innerText = 'Load'
+      } else {
+        saveLoadElement.innerText = 'Save'
+      }
+    }
+  })
+  saveLoadElement.addEventListener('click', saveLoadPreset)
+  presetInputElement.addEventListener('keydown', async event => {
+    if (event.keyCode === 13) {
+      event.preventDefault()
+      saveLoadElement()
+    }
+  })
   addButton.addEventListener('click', addToList)
-
-  const resetButton = document.getElementById('delete-button')
   resetButton.addEventListener('click', async () => {
     const lastChance = confirm('Are you sure about resetting every data?')
     if (lastChance) {

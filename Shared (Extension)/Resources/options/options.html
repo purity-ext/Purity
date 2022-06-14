@@ -16,14 +16,32 @@
       <h1>Purity Settings</h1>
       <div class="divider"></div>
       <h2>Default Blocked Events</h2>
-      <div class="blocks">
-        <div class="append-block" style="cursor: default">
+      <div class="column-container">
+        <div class="row-container">
           <input
             type="text"
             class="append-textbox"
-            placeholder="Type events (comma separated)"
+            id="preset-textbox"
+            placeholder="Type preset name"
+            list="preset-list"
+            style="font-size: 0.875rem"
           />
-          <button id="add-event" class="list-button">﹢</button>
+          <div class="primary-button" id="preset-save-or-load">Save</div>
+          <datalist id="preset-list">
+            <option value="Blocked"></option>
+            <option value="Nothing"></option>
+          </datalist>
+        </div>
+        <div class="blocks">
+          <div class="append-block" style="cursor: default">
+            <input
+              type="text"
+              class="append-textbox"
+              id="append-textbox"
+              placeholder="Type events (comma separated)"
+            />
+            <button id="add-event" class="list-button">﹢</button>
+          </div>
         </div>
       </div>
       <div class="divider"></div>

@@ -17,6 +17,21 @@ body {
   border-bottom: 1px solid #e0e0e0;
 }
 
+.row-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.column-container {
+  max-width: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 p {
   user-select: none;
   margin: 0;
@@ -78,6 +93,10 @@ p {
   cursor: pointer;
   border-radius: 8px;
   transition: background-color ease-in-out 0.1s;
+}
+
+.row-container > .primary-button {
+  padding: 8px 12px;
 }
 
 .primary-button:hover {

@@ -1,3 +1,8 @@
+const defaultPresets = {
+  Nothing: [],
+  Blocked: ['contextmenu', 'copy', 'dragstart', 'selectstart']
+}
+
 browser.setValue = async ({
   blockedEvents,
   url,
@@ -31,9 +36,14 @@ browser.setValue = async ({
 browser.getValue = async (key, preset = false) => {
   if (key === 'defaultValue') {
     return (await browser.storage.local.get('defaultValue')).defaultValue
+  } else if (key === 'presets') {
+    return (await browser.storage.local.get({ presets: {} })).presets
   } else if (preset) {
+    if (key === 'Default Blocked Events') {
+      return (await browser.storage.local.get('defaultValue')).defaultValue
+    }
     const { presets } = await browser.storage.local.get({ presets: {} })
-    return presets[key]
+    return presets[key] ?? defaultPresets[key]
   } else {
     const { blockedEvents, isEnabled } = await browser.storage.local.get({
       blockedEvents: {},

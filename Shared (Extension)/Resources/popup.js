@@ -115,6 +115,7 @@ const loadPreset = async name => {
     url
   })
   await browser.tabs.reload(id)
+  window.location.reload()
 }
 
 const saveLoadPreset = async () => {
@@ -137,6 +138,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   })
   const url = new URL(_url).origin
   const [blockedEvents, isEnabled] = await browser.getValue(url)
+  const presets = await browser.getValue('presets')
 
   const checkbox = document.getElementById('enabled')
   checkbox.checked = isEnabled ?? true
@@ -147,6 +149,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     const block = makeBlock(eventName)
     appendBlock.before(block)
   }
+
+  const datalist = document.getElementById('preset-list')
+  Object.keys(presets).forEach(async name => {
+    const option = document.createElement('option')
+    option.value = name
+    datalist.appendChild(option)
+  })
 
   const inputElement = document.getElementById('append-textbox')
   const saveLoadElement = document.getElementById('preset-save-or-load')
