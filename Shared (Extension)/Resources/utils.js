@@ -1,8 +1,20 @@
-browser.setValue = async ({ blockedEvents, url, defaultValue, isEnabled }) => {
+browser.setValue = async ({
+  blockedEvents,
+  url,
+  defaultValue,
+  isEnabled,
+  presetName
+}) => {
   const result = {}
   if (blockedEvents !== undefined) {
-    result.blockedEvents = {
-      [url]: blockedEvents
+    if (presetName !== undefined) {
+      result.presets = {
+        [presetName]: blockedEvents
+      }
+    } else {
+      result.blockedEvents = {
+        [url]: blockedEvents
+      }
     }
   }
   if (isEnabled !== undefined) {
@@ -16,9 +28,12 @@ browser.setValue = async ({ blockedEvents, url, defaultValue, isEnabled }) => {
   await browser.storage.local.set(result)
 }
 
-browser.getValue = async key => {
+browser.getValue = async (key, preset = false) => {
   if (key === 'defaultValue') {
     return (await browser.storage.local.get('defaultValue')).defaultValue
+  } else if (preset) {
+    const { presets } = await browser.storage.local.get({ presets: {} })
+    return presets[key]
   } else {
     const { blockedEvents, isEnabled } = await browser.storage.local.get({
       blockedEvents: {},

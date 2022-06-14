@@ -12,20 +12,26 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image("Icon")
-                .resizable()
-                .frame(width: 64.0, height: 64.0)
-            Text("Purity")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-            switch extensionState {
-            case .unknown:
-                Text("If it's not enabled yet, you can enable the extension in Settings.")
-            case .disabled:
-                Text("Enable this extension in Safari Extensions preferences.")
-            case .enabled:
-                Text("The extension is already enabled.")
+            VStack {
+                Image("Icon")
+                    .resizable()
+                    .frame(width: 64.0, height: 64.0)
+                Text("Purity")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
             }
+            .padding([.vertical], 4)
+            Group {
+                switch extensionState {
+                case .unknown:
+                    Text("If it's not enabled yet, you can enable the extension in Settings.")
+                case .disabled:
+                    Text("Enable this extension in Safari Extensions preferences.")
+                case .enabled:
+                    Text("The extension is already enabled.")
+                }
+            }
+            .padding([.horizontal])
         }
         .onAppear {
             Task {

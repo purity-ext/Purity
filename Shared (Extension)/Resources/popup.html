@@ -19,11 +19,22 @@
         <input type="checkbox" id="enabled" />
         <label for="enabled">Enable in this site</label>
       </div>
+      <div class="row-container">
+        <input
+          type="text"
+          class="append-textbox"
+          id="preset-textbox"
+          placeholder="Type preset name"
+          style="font-size: 0.875rem"
+        />
+        <div class="primary-button" id="preset-save-or-load">Save</div>
+      </div>
       <div class="blocks">
         <div class="append-block" style="cursor: default">
           <input
             type="text"
             class="append-textbox"
+            id="append-textbox"
             placeholder="Type events (comma separated)"
           />
           <button id="add-event" class="list-button">﹢</button>

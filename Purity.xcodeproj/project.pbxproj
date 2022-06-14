@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		551A207127DC741B00D76222 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551A207027DC741B00D76222 /* CloudKit.framework */; };
-		551A207427DC744400D76222 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551A207327DC744400D76222 /* CloudKit.framework */; };
-		551A207627DC744C00D76222 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551A207327DC744400D76222 /* CloudKit.framework */; };
-		551A207727DC745400D76222 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 551A207027DC741B00D76222 /* CloudKit.framework */; };
 		555D1DA727C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
 		555D1DA827C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
 		555D1DAC27C6426B008464B5 /* PurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DAB27C6426B008464B5 /* PurityApp.swift */; };
@@ -121,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				551A207427DC744400D76222 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				551A207127DC741B00D76222 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +131,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				551A207627DC744C00D76222 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +138,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				551A207727DC745400D76222 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

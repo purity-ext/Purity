@@ -2,18 +2,20 @@ const exportAsJSON = async () => {
   const result = await browser.storage.local.get([
     'blockedEvents',
     'isEnabled',
-    'defaultValue'
+    'defaultValue',
+    'presets'
   ])
   return JSON.stringify(result)
 }
 
 const importFromJSON = async json => {
   // to block importing any weird datas
-  const { blockedEvents, isEnabled, defaultValue } = JSON.parse(json)
+  const { blockedEvents, isEnabled, defaultValue, presets } = JSON.parse(json)
   await browser.storage.local.set({
     blockedEvents,
     isEnabled,
-    defaultValue
+    defaultValue,
+    presets
   })
   window.location.reload()
 }
@@ -22,7 +24,8 @@ const resetData = async () => {
   await browser.storage.local.set({
     blockedEvents: {},
     isEnabled: {},
-    defaultValue: []
+    defaultValue: [],
+    presets: {}
   })
   window.location.reload()
 }

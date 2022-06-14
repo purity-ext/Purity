@@ -20,7 +20,7 @@ const removeFromList = async event => {
 }
 
 const addToList = async () => {
-  const [inputElement] = document.getElementsByClassName('append-textbox')
+  const inputElement = document.getElementById('append-textbox')
   const eventInput = inputElement.value
   if (eventInput.length === 0) {
     return
@@ -87,6 +87,49 @@ const toggleEnable = async event => {
   await browser.tabs.reload(id)
 }
 
+const savePreset = async name => {
+  const [{ url: _url }] = await browser.tabs.query({
+    active: true,
+    currentWindow: true
+  })
+  const url = new URL(_url).origin
+  const [blockedEvents] = await browser.getValue(url)
+
+  await browser.setValue({
+    presetName: name,
+    blockedEvents
+  })
+  const saveLoadElement = document.getElementById('preset-save-or-load')
+  saveLoadElement.innerText = 'Load'
+}
+
+const loadPreset = async name => {
+  const [{ url: _url, id }] = await browser.tabs.query({
+    active: true,
+    currentWindow: true
+  })
+  const url = new URL(_url).origin
+  const blockedEvents = await browser.getValue(name, true)
+  await browser.setValue({
+    blockedEvents,
+    url
+  })
+  await browser.tabs.reload(id)
+}
+
+const saveLoadPreset = async () => {
+  const presetInputElement = document.getElementById('preset-textbox')
+  if (presetInputElement.value.length !== 0) {
+    if (
+      (await browser.getValue(presetInputElement.value, true)) !== undefined
+    ) {
+      loadPreset(presetInputElement.value)
+    } else {
+      savePreset(presetInputElement.value)
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const [{ url: _url }] = await browser.tabs.query({
     active: true,
@@ -105,13 +148,32 @@ document.addEventListener('DOMContentLoaded', async () => {
     appendBlock.before(block)
   }
 
-  const [inputElement] = document.getElementsByClassName('append-textbox')
+  const inputElement = document.getElementById('append-textbox')
+  const saveLoadElement = document.getElementById('preset-save-or-load')
+  const presetInputElement = document.getElementById('preset-textbox')
+  const addButton = document.getElementById('add-event')
   inputElement.addEventListener('keydown', event => {
+    // it's deprecated but i wasn't able to replace it with .code
     if (event.keyCode === 13) {
       event.preventDefault()
       addToList()
     }
   })
-  const addButton = document.getElementById('add-event')
+  presetInputElement.addEventListener('input', async event => {
+    if (event.target.value.length !== 0) {
+      if ((await browser.getValue(event.target.value, true)) !== undefined) {
+        saveLoadElement.innerText = 'Load'
+      } else {
+        saveLoadElement.innerText = 'Save'
+      }
+    }
+  })
+  saveLoadElement.addEventListener('click', saveLoadPreset)
+  presetInputElement.addEventListener('keydown', async event => {
+    if (event.keyCode === 13) {
+      event.preventDefault()
+      saveLoadElement()
+    }
+  })
   addButton.addEventListener('click', addToList)
 })
