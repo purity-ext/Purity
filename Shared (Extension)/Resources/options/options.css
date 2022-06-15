@@ -99,6 +99,10 @@ p {
   padding: 8px 12px;
 }
 
+.row-container > .red-button {
+  padding: 8px 12px;
+}
+
 .primary-button:hover {
   background-color: darkgray;
   transition: background-color ease-in-out 0.1s;

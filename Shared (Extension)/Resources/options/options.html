@@ -15,7 +15,7 @@
     <div class="container">
       <h1>Purity Settings</h1>
       <div class="divider"></div>
-      <h2>Default Blocked Events</h2>
+      <h2>Set Default Blocked Events / Manage Preset</h2>
       <div class="column-container">
         <div class="row-container">
           <input
@@ -27,8 +27,16 @@
             style="font-size: 0.875rem"
           />
           <div class="primary-button" id="preset-save-or-load">Save</div>
+          <button
+            class="red-button"
+            id="delete-preset-button"
+            style="display: none"
+          >
+            Delete
+          </button>
           <datalist id="preset-list">
             <option value="Blocked"></option>
+            <option value="Default Blocked Events"></option>
             <option value="Nothing"></option>
           </datalist>
         </div>
@@ -43,6 +51,9 @@
             <button id="add-event" class="list-button">﹢</button>
           </div>
         </div>
+        <button class="primary-button" id="set-as-default-button">
+          Set as default
+        </button>
       </div>
       <div class="divider"></div>
       <h2>Import / Export</h2>
@@ -53,7 +64,7 @@
       </div>
       <div class="divider"></div>
       <h2>Danger Zone</h2>
-      <button class="red-button" id="delete-button">
+      <button class="red-button" id="delete-all-button">
         RESET EVERY DATA (NO UNDO!)
       </button>
     </div>

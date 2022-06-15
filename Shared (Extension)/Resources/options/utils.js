@@ -11,18 +11,17 @@ browser.setValue = async ({
   presetName
 }) => {
   const result = {}
-  if (blockedEvents !== undefined) {
-    if (presetName !== undefined && presetName !== 'Default Blocked Events') {
-      result.presets = {
-        [presetName]: blockedEvents
-      }
-    } else {
-      result.blockedEvents = {
-        [url]: blockedEvents
-      }
+  if (presetName !== undefined) {
+    result.presets = {
+      [presetName]: blockedEvents
     }
   }
-  if (isEnabled !== undefined) {
+  if (blockedEvents !== undefined && url !== undefined) {
+    result.blockedEvents = {
+      [url]: blockedEvents
+    }
+  }
+  if (isEnabled !== undefined && url !== undefined) {
     result.isEnabled = {
       [url]: isEnabled
     }
@@ -40,7 +39,7 @@ browser.getValue = async (key, preset = false) => {
     return (await browser.storage.local.get({ presets: {} })).presets
   } else if (preset) {
     if (key === 'Default Blocked Events') {
-      return undefined
+      return (await browser.storage.local.get('defaultValue')).defaultValue
     }
     const { presets } = await browser.storage.local.get({ presets: {} })
     return presets[key] ?? defaultPresets[key]

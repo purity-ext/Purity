@@ -11,18 +11,17 @@ browser.setValue = async ({
   presetName
 }) => {
   const result = {}
-  if (blockedEvents !== undefined) {
-    if (presetName !== undefined) {
-      result.presets = {
-        [presetName]: blockedEvents
-      }
-    } else {
-      result.blockedEvents = {
-        [url]: blockedEvents
-      }
+  if (presetName !== undefined) {
+    result.presets = {
+      [presetName]: blockedEvents
     }
   }
-  if (isEnabled !== undefined) {
+  if (blockedEvents !== undefined && url !== undefined) {
+    result.blockedEvents = {
+      [url]: blockedEvents
+    }
+  }
+  if (isEnabled !== undefined && url !== undefined) {
     result.isEnabled = {
       [url]: isEnabled
     }

@@ -152,9 +152,11 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const datalist = document.getElementById('preset-list')
   Object.keys(presets).forEach(async name => {
-    const option = document.createElement('option')
-    option.value = name
-    datalist.appendChild(option)
+    if (presets[name] !== undefined) {
+      const option = document.createElement('option')
+      option.value = name
+      datalist.appendChild(option)
+    }
   })
 
   const inputElement = document.getElementById('append-textbox')
@@ -172,17 +174,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (event.target.value.length !== 0) {
       if ((await browser.getValue(event.target.value, true)) !== undefined) {
         saveLoadElement.innerText = 'Load'
-      } else {
-        saveLoadElement.innerText = 'Save'
+        return
       }
     }
+    saveLoadElement.innerText = 'Save'
   })
   saveLoadElement.addEventListener('click', saveLoadPreset)
-  presetInputElement.addEventListener('keydown', async event => {
-    if (event.keyCode === 13) {
-      event.preventDefault()
-      saveLoadElement()
-    }
-  })
   addButton.addEventListener('click', addToList)
 })
