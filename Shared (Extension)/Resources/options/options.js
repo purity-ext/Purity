@@ -208,12 +208,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const defaultValue = await browser.getValue('defaultValue')
   const presets = await browser.getValue('presets')
-
-  const [appendBlock] = document.getElementsByClassName('append-block')
-  for (const eventName of defaultValue ?? []) {
-    const block = makeBlock(eventName)
-    appendBlock.before(block)
-  }
+  eventsToDOM(defaultValue)
 
   const datalist = document.getElementById('preset-list')
   Object.keys(presets).forEach(async name => {

@@ -115,7 +115,7 @@ const loadPreset = async name => {
     url
   })
   await browser.tabs.reload(id)
-  window.location.reload()
+  eventsToDOM(blockedEvents)
 }
 
 const saveLoadPreset = async () => {
@@ -131,6 +131,18 @@ const saveLoadPreset = async () => {
   }
 }
 
+const eventsToDOM = events => {
+  const [blocks] = document.getElementsByClassName('blocks')
+  const [appendBlock] = document.getElementsByClassName('append-block')
+  Array.from(blocks.getElementsByClassName('block')).forEach(block =>
+    block.remove()
+  )
+  events.forEach(e => {
+    const block = makeBlock(e)
+    appendBlock.before(block)
+  })
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
   const [{ url: _url }] = await browser.tabs.query({
     active: true,
@@ -139,16 +151,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   const url = new URL(_url).origin
   const [blockedEvents, isEnabled] = await browser.getValue(url)
   const presets = await browser.getValue('presets')
+  eventsToDOM(blockedEvents)
 
   const checkbox = document.getElementById('enabled')
   checkbox.checked = isEnabled ?? true
   checkbox.addEventListener('input', toggleEnable)
-
-  const [appendBlock] = document.getElementsByClassName('append-block')
-  for (const eventName of blockedEvents ?? []) {
-    const block = makeBlock(eventName)
-    appendBlock.before(block)
-  }
 
   const datalist = document.getElementById('preset-list')
   Object.keys(presets).forEach(async name => {
