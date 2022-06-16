@@ -86,6 +86,7 @@
 		551A207227DC744200D76222 /* Purity (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Purity (iOS).entitlements"; sourceTree = "<group>"; };
 		551A207327DC744400D76222 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.2.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		551A207527DC744B00D76222 /* Purity Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Purity Extension (iOS).entitlements"; sourceTree = "<group>"; };
+		5540049E285B4E4600D4332A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		555D1DA627C64117008464B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		555D1DAB27C6426B008464B5 /* PurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurityApp.swift; sourceTree = "<group>"; };
 		555D1DAE27C652FC008464B5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 		55B238B127C076FB002F3909 = {
 			isa = PBXGroup;
 			children = (
+				5540049E285B4E4600D4332A /* README.md */,
 				551A207527DC744B00D76222 /* Purity Extension (iOS).entitlements */,
 				551A207227DC744200D76222 /* Purity (iOS).entitlements */,
 				555D1DAE27C652FC008464B5 /* LICENSE */,
