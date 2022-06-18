@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="popup.css" />
     <link rel="stylesheet" href="normalize.css" />
     <script src="browser-polyfill.min.js"></script>
@@ -43,8 +45,12 @@
             class="append-textbox"
             id="append-textbox"
             placeholder="Type events (comma separated)"
+            list="event-list"
           />
           <button id="add-event" class="list-button">﹢</button>
+          <datalist id="event-list">
+            <!--This will be filled up using JS-->
+          </datalist>
         </div>
       </div>
       <footer class="footer-text">

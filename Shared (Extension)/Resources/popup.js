@@ -157,13 +157,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   checkbox.checked = isEnabled ?? true
   checkbox.addEventListener('input', toggleEnable)
 
-  const datalist = document.getElementById('preset-list')
-  Object.keys(presets).forEach(async name => {
+  const presetDatalist = document.getElementById('preset-list')
+  Object.keys(presets).forEach(name => {
     if (presets[name] !== undefined) {
       const option = document.createElement('option')
       option.value = name
-      datalist.appendChild(option)
+      presetDatalist.appendChild(option)
     }
+  })
+  const eventDatalist = document.getElementById('event-list')
+  browser.EVENTS.forEach(name => {
+    const option = document.createElement('option')
+    option.value = name
+    eventDatalist.appendChild(option)
   })
 
   const inputElement = document.getElementById('append-textbox')

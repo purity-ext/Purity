@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5543553C285E1F6B00957BE0 /* events.js in Resources */ = {isa = PBXBuildFile; fileRef = 5543553B285E1F6B00957BE0 /* events.js */; };
+		5543553D285E1F6B00957BE0 /* events.js in Resources */ = {isa = PBXBuildFile; fileRef = 5543553B285E1F6B00957BE0 /* events.js */; };
+		5543553F285E1FCD00957BE0 /* normalize.css in Resources */ = {isa = PBXBuildFile; fileRef = 5543553E285E1FCD00957BE0 /* normalize.css */; };
+		55435540285E1FCD00957BE0 /* normalize.css in Resources */ = {isa = PBXBuildFile; fileRef = 5543553E285E1FCD00957BE0 /* normalize.css */; };
 		555D1DA727C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
 		555D1DA827C64117008464B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DA627C64117008464B5 /* ContentView.swift */; };
 		555D1DAC27C6426B008464B5 /* PurityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DAB27C6426B008464B5 /* PurityApp.swift */; };
@@ -88,6 +92,8 @@
 		551A207527DC744B00D76222 /* Purity Extension (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Purity Extension (iOS).entitlements"; sourceTree = "<group>"; };
 		5540049E285B4E4600D4332A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5540049F285C445B00D4332A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5543553B285E1F6B00957BE0 /* events.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = events.js; sourceTree = "<group>"; };
+		5543553E285E1FCD00957BE0 /* normalize.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = normalize.css; sourceTree = "<group>"; };
 		555D1DA627C64117008464B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		555D1DAB27C6426B008464B5 /* PurityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurityApp.swift; sourceTree = "<group>"; };
 		555D1DAE27C652FC008464B5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -204,11 +210,13 @@
 		55B238C127C076FD002F3909 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5543553E285E1FCD00957BE0 /* normalize.css */,
 				55FC2B7A284F2ADB004B9788 /* options */,
 				55B238C227C076FD002F3909 /* _locales */,
 				55B238C327C076FD002F3909 /* images */,
 				55B238C427C076FD002F3909 /* manifest.json */,
 				55B238C627C076FD002F3909 /* content.js */,
+				5543553B285E1F6B00957BE0 /* events.js */,
 				55B238C727C076FD002F3909 /* popup.html */,
 				55B238C827C076FD002F3909 /* popup.css */,
 				55B238C927C076FD002F3909 /* popup.js */,
@@ -406,10 +414,12 @@
 				55FC2B7B284F2ADB004B9788 /* options in Resources */,
 				55B2391727C076FE002F3909 /* popup.css in Resources */,
 				55B2391527C076FE002F3909 /* popup.html in Resources */,
+				5543553F285E1FCD00957BE0 /* normalize.css in Resources */,
 				55B2390D27C076FE002F3909 /* images in Resources */,
 				55B2390F27C076FE002F3909 /* manifest.json in Resources */,
 				555D1DB427C88E97008464B5 /* utils.js in Resources */,
 				55B2390B27C076FE002F3909 /* _locales in Resources */,
+				5543553C285E1F6B00957BE0 /* events.js in Resources */,
 				55B2391327C076FE002F3909 /* content.js in Resources */,
 				55B2391927C076FE002F3909 /* popup.js in Resources */,
 			);
@@ -422,10 +432,12 @@
 				55FC2B7C284F2ADB004B9788 /* options in Resources */,
 				55B2391827C076FE002F3909 /* popup.css in Resources */,
 				55B2391627C076FE002F3909 /* popup.html in Resources */,
+				55435540285E1FCD00957BE0 /* normalize.css in Resources */,
 				55B2390E27C076FE002F3909 /* images in Resources */,
 				55B2391027C076FE002F3909 /* manifest.json in Resources */,
 				555D1DB527C88E97008464B5 /* utils.js in Resources */,
 				55B2390C27C076FE002F3909 /* _locales in Resources */,
+				5543553D285E1F6B00957BE0 /* events.js in Resources */,
 				55B2391427C076FE002F3909 /* content.js in Resources */,
 				55B2391A27C076FE002F3909 /* popup.js in Resources */,
 			);
@@ -602,7 +614,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Purity Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -634,7 +646,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Purity Extension (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
@@ -670,7 +682,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Purity (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -708,7 +720,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Purity (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 16;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
@@ -745,7 +757,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Purity.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -778,7 +790,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Purity.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -814,7 +826,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Purity.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -851,7 +863,7 @@
 				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Purity.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 15;
+				CURRENT_PROJECT_VERSION = 17;
 				DEVELOPMENT_TEAM = 32Z9KZZ4PU;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;

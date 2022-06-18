@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="normalize.css" />
     <script src="browser-polyfill.min.js"></script>
     <script src="utils.js"></script>
+    <script src="events.js"></script>
     <script src="options.js"></script>
     <title>Purity Settings</title>
   </head>
@@ -47,8 +48,12 @@
               class="append-textbox"
               id="append-textbox"
               placeholder="Type events (comma separated)"
+              list="event-list"
             />
             <button id="add-event" class="list-button">﹢</button>
+            <datalist id="event-list">
+              <!--This will be filled up using JS-->
+            </datalist>
           </div>
         </div>
         <button class="primary-button" id="set-as-default-button">
