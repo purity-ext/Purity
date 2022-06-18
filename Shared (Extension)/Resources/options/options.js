@@ -170,7 +170,7 @@ const DOMtoEvents = () => {
   )
 }
 
-const eventsToDOM = events => {
+const eventsToDOM = (events = []) => {
   const [blocks] = document.getElementsByClassName('blocks')
   const [appendBlock] = document.getElementsByClassName('append-block')
   Array.from(blocks.getElementsByClassName('block')).forEach(block =>

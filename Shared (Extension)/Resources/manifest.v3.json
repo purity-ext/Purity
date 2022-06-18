@@ -36,8 +36,10 @@
     },
 
     "permissions": [
-        "activeTab",
         "storage"
+    ],
+    "host_permissions": [
+        "http://*/*", "https://*/*"
     ],
     "options_ui": {
         "page": "options/options.html"
