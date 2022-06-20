@@ -24,11 +24,10 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Go to the extension directory
-        run: cd 'Shared (Extension)/Resources'
-
       - name: Zip everything
-        run: zip -r -FS purity-firefox.zip * --exclude 'manifest.v3.json'
+        run: |
+          cd 'Shared (Extension)/Resources'
+          zip -r -FS ../../purity-firefox.zip * --exclude 'manifest.v3.json'
         
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
