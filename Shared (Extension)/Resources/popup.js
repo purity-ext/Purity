@@ -60,13 +60,13 @@ const makeBlock = eventName => {
   block.setAttribute('data-event', eventName)
 
   const eventText = document.createElement('p')
-  eventText.innerHTML = eventName
+  eventText.innerText = eventName
   const spacer = document.createElement('div')
   spacer.className = 'spacer'
   const removeButton = document.createElement('button')
   removeButton.className = 'list-button'
   removeButton.id = 'remove-event'
-  removeButton.innerHTML = '-'
+  removeButton.innerText = '-'
   removeButton.addEventListener('click', removeFromList)
 
   block.append(eventText, spacer, removeButton)
