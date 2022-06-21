@@ -30,12 +30,13 @@ jobs:
           zip -r -FS ../../purity-firefox.zip * --exclude 'manifest.v3.json'
         
       - name: Pack into xpi
-        uses: cardinalby/webext-buildtools-firefox-sign-xpi-action@v1
+        uses: kewisch/action-web-ext@v1
         with:
-          zipFilePath: purity-firefox.zip
-          xpiFilePath: purity-firefox.xpi
-          jwtIssuer: ${{ secrets.FF_JWT_ISSUER }}
-          jwtSecret: ${{ secrets.FF_JWT_SECRET }}
+          cmd: sign
+          source: purity-firefox.zip
+          channel: listed
+          apiKey: ${{ secrets.FF_JWT_ISSUER }}
+          apiSecret: ${{ secrets.FF_JWT_SECRET }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
