@@ -34,7 +34,7 @@ jobs:
         with:
           cmd: sign
           source: purity-firefox.zip
-          channel: listed
+          channel: unlisted
           apiKey: ${{ secrets.FF_JWT_ISSUER }}
           apiSecret: ${{ secrets.FF_JWT_SECRET }}
 
