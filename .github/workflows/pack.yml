@@ -30,9 +30,10 @@ jobs:
           import os
           import json
           commit_sha = os.environ['GITHUB_SHA'][:7]
-          with open('Shared (Extension)/Resources/manifest.json', 'r+') as manifest_file:
+          with open('Shared (Extension)/Resources/manifest.json', 'r') as manifest_file:
               manifest = json.load(manifest_file)
-              manifest['version'] = manifest['version'] + '-' + commit_sha
+          manifest['version'] = manifest['version'] + '-' + commit_sha
+          with open('Shared (Extension)/Resources/manifest.json', 'w') as manifest_file:
               json.dump(manifest, manifest_file)
         
       - name: Zip everything
@@ -69,9 +70,10 @@ jobs:
           import os
           import json
           commit_sha = os.environ['GITHUB_SHA'][:7]
-          with open('Shared (Extension)/Resources/manifest.v3.json', 'r+') as manifest_file:
+          with open('Shared (Extension)/Resources/manifest.json', 'r') as manifest_file:
               manifest = json.load(manifest_file)
-              manifest['version'] = manifest['version'] + '-' + commit_sha
+          manifest['version'] = manifest['version'] + '-' + commit_sha
+          with open('Shared (Extension)/Resources/manifest.json', 'w') as manifest_file:
               json.dump(manifest, manifest_file)
 
       - name: Zip everything
