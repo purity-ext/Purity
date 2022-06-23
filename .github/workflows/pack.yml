@@ -32,7 +32,7 @@ jobs:
           commit_sha = int(os.environ['GITHUB_SHA'][:4], 16)
           with open('Shared (Extension)/Resources/manifest.json', 'r') as manifest_file:
               manifest = json.load(manifest_file)
-          manifest['version'] = manifest['version'] + '.' + commit_sha
+          manifest['version'] = manifest['version'] + '.' + str(commit_sha)
           with open('Shared (Extension)/Resources/manifest.json', 'w') as manifest_file:
               json.dump(manifest, manifest_file)
         
@@ -72,7 +72,7 @@ jobs:
           commit_sha = int(os.environ['GITHUB_SHA'][:4], 16)
           with open('Shared (Extension)/Resources/manifest.json', 'r') as manifest_file:
               manifest = json.load(manifest_file)
-          manifest['version'] = manifest['version'] + '.' + commit_sha
+          manifest['version'] = manifest['version'] + '.' + str(commit_sha)
           with open('Shared (Extension)/Resources/manifest.json', 'w') as manifest_file:
               json.dump(manifest, manifest_file)
 
