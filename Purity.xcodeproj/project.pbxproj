@@ -19,6 +19,8 @@
 		555D1DB227C65450008464B5 /* ExtensionState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 555D1DB027C65450008464B5 /* ExtensionState.swift */; };
 		555D1DB427C88E97008464B5 /* utils.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB327C88E97008464B5 /* utils.js */; };
 		555D1DB527C88E97008464B5 /* utils.js in Resources */ = {isa = PBXBuildFile; fileRef = 555D1DB327C88E97008464B5 /* utils.js */; };
+		5574EAE628658CA800A58A66 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574EAE528658CA800A58A66 /* Launch Screen.storyboard */; };
+		5574EAE728658CA800A58A66 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5574EAE528658CA800A58A66 /* Launch Screen.storyboard */; };
 		55B238ED27C076FD002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238EC27C076FD002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B238F727C076FE002F3909 /* Purity Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55B238F627C076FE002F3909 /* Purity Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		55B2390727C076FE002F3909 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55B238BE27C076FD002F3909 /* Assets.xcassets */; };
@@ -99,6 +101,7 @@
 		555D1DAE27C652FC008464B5 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		555D1DB027C65450008464B5 /* ExtensionState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionState.swift; sourceTree = "<group>"; };
 		555D1DB327C88E97008464B5 /* utils.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = utils.js; sourceTree = "<group>"; };
+		5574EAE528658CA800A58A66 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		55B238BE27C076FD002F3909 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55B238C027C076FD002F3909 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
 		55B238C227C076FD002F3909 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
@@ -194,6 +197,7 @@
 				55B238BE27C076FD002F3909 /* Assets.xcassets */,
 				555D1DA627C64117008464B5 /* ContentView.swift */,
 				555D1DAB27C6426B008464B5 /* PurityApp.swift */,
+				5574EAE528658CA800A58A66 /* Launch Screen.storyboard */,
 			);
 			path = "Shared (App)";
 			sourceTree = "<group>";
@@ -395,6 +399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5574EAE628658CA800A58A66 /* Launch Screen.storyboard in Resources */,
 				55B2390727C076FE002F3909 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5574EAE728658CA800A58A66 /* Launch Screen.storyboard in Resources */,
 				55B2390827C076FE002F3909 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -626,7 +632,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -658,7 +664,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -687,8 +693,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Purity;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -696,7 +704,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -725,8 +733,10 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iOS (App)/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Purity;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -734,7 +744,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -770,7 +780,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -803,7 +813,7 @@
 					"@executable_path/../../../../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -839,7 +849,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
@@ -876,7 +886,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				MARKETING_VERSION = 1.0.2;
+				MARKETING_VERSION = 1.0.3;
 				OTHER_LDFLAGS = (
 					"-framework",
 					SafariServices,
