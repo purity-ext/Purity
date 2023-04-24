@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var extensionState: ExtensionState = .unknown
-    
+
     var body: some View {
         VStack {
             VStack {
@@ -28,7 +28,7 @@ struct ContentView: View {
                 case .disabled:
                     Text("Enable this extension in Safari Extensions preferences.")
                 case .enabled:
-                    Text("The extension is already enabled.")
+                    Text("The extension is already enabled. You can close this window.")
                 }
             }
             .padding([.horizontal])
@@ -39,7 +39,7 @@ struct ContentView: View {
             }
         }
         #if os(macOS)
-        .frame(maxWidth: 800, maxHeight: 600)
+        .frame(width: 800, height: 600)
         #endif
     }
 }

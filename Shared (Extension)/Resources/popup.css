@@ -39,10 +39,6 @@ p {
   gap: 0.75rem;
 }
 
-input[type='checkbox'] {
-  zoom: 1.2;
-}
-
 .check-activate {
   display: flex;
   flex-direction: row;

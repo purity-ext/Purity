@@ -318,9 +318,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55B2391D27C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity Extension (iOS)" */;
 			buildPhases = (
+				554B13C629F6492100785DD9 /* Change Manifest */,
 				55B238E827C076FD002F3909 /* Sources */,
 				55B238E927C076FD002F3909 /* Frameworks */,
 				55B238EA27C076FD002F3909 /* Resources */,
+				554B13C729F649A600785DD9 /* Revert Manifest */,
 			);
 			buildRules = (
 			);
@@ -335,9 +337,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55B2392427C076FE002F3909 /* Build configuration list for PBXNativeTarget "Purity Extension (macOS)" */;
 			buildPhases = (
+				554B13C829F649D500785DD9 /* Change Manifest */,
 				55B238F227C076FE002F3909 /* Sources */,
 				55B238F327C076FE002F3909 /* Frameworks */,
 				55B238F427C076FE002F3909 /* Resources */,
+				554B13C929F649EB00785DD9 /* Revert Manifest */,
 			);
 			buildRules = (
 			);
@@ -448,6 +452,81 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		554B13C629F6492100785DD9 /* Change Manifest */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Change Manifest";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$PROJECT_DIR/Shared (Extension)/Resources\"\nmv manifest.json _manifest.json\nmv manifest.safari.json manifest.json\n";
+		};
+		554B13C729F649A600785DD9 /* Revert Manifest */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Revert Manifest";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$PROJECT_DIR/Shared (Extension)/Resources\"\nmv manifest.json manifest.safari.json\nmv _manifest.json manifest.json\n";
+		};
+		554B13C829F649D500785DD9 /* Change Manifest */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Change Manifest";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$PROJECT_DIR/Shared (Extension)/Resources\"\nmv manifest.json _manifest.json\nmv manifest.safari.json manifest.json\n";
+		};
+		554B13C929F649EB00785DD9 /* Revert Manifest */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Revert Manifest";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"$PROJECT_DIR/Shared (Extension)/Resources\"\nmv manifest.json manifest.safari.json\nmv _manifest.json manifest.json\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		55B238CA27C076FD002F3909 /* Sources */ = {
@@ -695,8 +774,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -735,8 +814,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

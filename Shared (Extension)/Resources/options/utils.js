@@ -1,6 +1,13 @@
 const defaultPresets = {
   Nothing: [],
-  Blocked: ['contextmenu', 'copy', 'dragstart', 'selectstart']
+  Blocked: [
+    'contextmenu',
+    'copy',
+    'dragstart',
+    'selectstart',
+    'touchstart',
+    'touchend'
+  ]
 }
 
 browser.setValue = async ({

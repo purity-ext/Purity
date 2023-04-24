@@ -26,12 +26,12 @@
     "browser_action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "19": "images/Purity-19px-toolbar.png",
-            "32": "images/Purity-32px-toolbar.png",
-            "38": "images/Purity-38px-toolbar.png",
-            "48": "images/Purity-48px-toolbar.png",
-            "72": "images/Purity-72px-toolbar.png",
-            "128": "images/Purity-128px-toolbar.png"
+            "19": "images/Purity-19px-toolbar-color.png",
+            "32": "images/Purity-32px-toolbar-color.png",
+            "38": "images/Purity-38px-toolbar-color.png",
+            "48": "images/Purity-48px-toolbar-color.png",
+            "72": "images/Purity-72px-toolbar-color.png",
+            "128": "images/Purity-128px-toolbar-color.png"
         }
     },
 
