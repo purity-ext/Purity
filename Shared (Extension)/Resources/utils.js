@@ -41,7 +41,10 @@ browser.setValue = async ({
 
 browser.getValue = async (key, preset = false) => {
   if (key === 'defaultValue') {
-    return (await browser.storage.local.get('defaultValue')).defaultValue
+    return (
+      (await browser.storage.local.get('defaultValue')).defaultValue ??
+      defaultPresets.Blocked
+    )
   } else if (key === 'presets') {
     return (await browser.storage.local.get({ presets: {} })).presets
   } else if (preset) {

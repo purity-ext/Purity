@@ -24,10 +24,10 @@ const importFromJSON = async json => {
 
 const resetData = async () => {
   await browser.storage.local.set({
-    blockedEvents: {},
-    isEnabled: {},
-    defaultValue: [],
-    presets: {}
+    blockedEvents: undefined,
+    isEnabled: undefined,
+    defaultValue: undefined,
+    presets: undefined
   })
   window.location.reload()
 }

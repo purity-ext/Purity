@@ -150,14 +150,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   })
   const url = new URL(_url).origin
   const [blockedEvents, isEnabled] = await browser.getValue(url)
-  const presets = await browser.getValue('presets')
   eventsToDOM(blockedEvents)
 
   const checkbox = document.getElementById('enabled')
-  checkbox.checked = isEnabled ?? true
+  checkbox.checked = isEnabled
   checkbox.addEventListener('input', toggleEnable)
 
   const presetDatalist = document.getElementById('preset-list')
+  const presets = await browser.getValue('presets')
   Object.keys(presets).forEach(name => {
     if (presets[name] !== undefined) {
       const option = document.createElement('option')
