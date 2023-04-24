@@ -46,7 +46,7 @@ jobs:
           zip -r -FS ../../purity-firefox.zip * --exclude 'manifest.v3.json'
         
       - name: Pack into xpi
-        uses: kewisch/action-web-ext@master
+        uses: kewisch/action-web-ext@main
         with:
           cmd: sign
           source: purity-firefox.zip
